@@ -1,0 +1,20 @@
+{
+  "db": {
+    "host": "localhost",
+    "port": 1433,
+    "database": "demo",
+    "username": "sa",
+    "password": "Davon2012",
+    "name": "db",
+    "connector": "mssql"
+  },
+  "lite": {
+    "host": "localhost",
+    "database": "demo",
+    "username": "sa",
+    "password": "Davon2012",
+    "file": "../bin/new.db",
+    "name": "lite",
+    "connector": "memory"
+  }
+}

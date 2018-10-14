@@ -1,0 +1,184 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "workorderequipmentstatus": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "workordertype": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "wlookupdetay": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "site": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "workordertypestatus": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "materialstorestock": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "workorderpriority": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "workordermaterialuse": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "location": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "store": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "failuretype": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "material": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "equipmentgroup": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "division": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "equipmentfailure": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "countsession": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "model": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "workorder": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "dvnuser": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "equipment": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "workorderfirmin": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "equipmentcounted": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "workorderdesc": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "contractfirmcontact": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "contractfirm": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "linkequipment2contract": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "calib": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  },
+  "contract": {
+    "dataSource": "lite",
+    "public": true,
+    "$promise": {},
+    "$resolved": true
+  }
+}
