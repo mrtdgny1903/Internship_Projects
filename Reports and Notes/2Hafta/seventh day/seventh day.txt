@@ -1,0 +1,5 @@
+
+
+Projeye Grid eklendi
+
+Serverdan gelen ve POST ve GET yapýlan verileri Grid de liste þeklinde gösterilmesi saðlandý.

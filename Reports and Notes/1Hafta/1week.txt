@@ -1,0 +1,85 @@
+
+This tutorial was followed.
+
+http://www.vogella.com/tutorials/EclipseWTP/article.html#installation-and-configuration-of-eclipse-wtp
+
+In this tutorial,
+
+I installed Eclipse and Apache Tomcat(webserver).
+
+Then,I have created a servlet which works as a webpage counter. It tracks the number of visitors of the webpage and persists the number in a text file.
+
+Then,I ran that project on this page http://localhost:8080/com.vogella.web.filecounter/FileCounter
+
+and output is This site has been accessed 1 times.
+	      This site has been accessed 2 times.
+
+The servlet will return the number of times it was accessed. If you wait 5 seconds and refresh the browser, the number should increase.
+
+
+
+
+
+https://medium.com/@gustavo.ponce.ch/spring-boot-restful-tutorial-7f0e314242ef
+
+this tutorial has done.
+
+
+
+
+
+Bir önceki projede 
+
+1) Chrome'a POSTMAN extension kurulacak. 
+2) POSTMAN kullanrak bir önceki tutorialda http://localhost:8080/employee URL si çaðrýlarak sonuçlarý POSTMAN da görünecek.
+
+3) EmployeeController sýnýfýna yeni bir method ekleyerek POST tipinde HTTP requestleri handle edip yeni 
+bir Employee kaydý yaratan bilme özelliði uygulamanýza eklenecek.
+
+POSTMAN dan POST tipinde bir request ve Employee datalarý gönderdiðinizde uygulamanýz yeni employee kaydýný yaratacak. 
+
+http://localhost:8080/employee la listeye baktýðýmýda bu yeni kaydý görüyor olacaðiz. 
+
+Spring Boot Restful Client
+
+Third day in görevi bugun
+
+SpringBootRestApiExample ile Yapýldý..  http://websystique.com/spring-boot/spring-boot-rest-api-example/
+
+POST metodu ile veri ekleyip
+
+GET ile verileri getirdik.
+
+
+
+Yeni Tutorial
+
+https://docs.sencha.com/extjs/6.0.2/guides/getting_started/getting_started.html
+
+
+SENCHA
+
+https://docs.sencha.com/extjs/6.0.2/guides/getting_started/getting_started.html
+
+------------------------------------>>>>>>>>      SONUÇ VE ÖNERÝLER KISMINA      >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>           Dunku tutorial yapildi sencha kuruldu (Dil problemi yasandi os i ingilzce yapinca duzeldi)
+
+App Olusturma
+
+sencha -sdk C:\Users\Murat\Desktop\ext-6.6.0-trial\ext-6.6.0 generate app Sportcial C:\Users\Murat\Desktop\Sportcial
+
+
+
+
+Command Line a gir.
+MyApp e git
+sencha app watch
+
+http://localhost:1841
+
+
+
+extjs form
+
+
+Sencha Architect kullanilarak Form olusturuldu.
+

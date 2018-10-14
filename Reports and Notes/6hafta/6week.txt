@@ -1,0 +1,5 @@
+tablolar verileriyle birlikte çekildi fakat bazý columnlarýn verileri null olarak geliyo bununla ilgileniyor..
+
+tablo verileri düzgünce çekildi 
+
+test kodu yazýlýp test edildi

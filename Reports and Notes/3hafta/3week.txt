@@ -1,0 +1,31 @@
+https://www.w3schools.com/js/default.asp
+
+üzerinden javascript tutoriallarýný okumaya baþlandý.
+
+Js tutoriallarýna devam edildi..
+
+
+JS tutoriallarýna devam ediliyor..
+
+Stringler ve Arrayler çalýþýldý..
+
+
+
+Jpa tutoriala baþlandý..
+
+Eclipse jpa projesi oluþturuldu ve mysql connector.jar dosyasý import edildi..
+
+mysql workbench kuruldu ve jpa için database oluþturuldu..
+
+XAMPP kuruldu..(sql server conf için)
+
+eclipse de oluþturulan projenin verileri sql workbenchde query yazarak çaðýrýldý..
+
+
+Yeni projeye baþlandý (Sportcial)
+
+Çalýþma ortamý kuruldu..Eclipsede proje github a baðlandý..
+
+Kayhan abi anlatým yaptý..
+
+Java tarafýna baþlandý..

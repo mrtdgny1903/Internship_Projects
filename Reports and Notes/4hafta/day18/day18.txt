@@ -1,0 +1,26 @@
+Redux tutoriallarýna bakýldý..
+
+SQL express edition kuruldu..
+
+loopback getting started yapýldý.
+
+SQL Server Managament Studio kuruldu..
+
+loopback Microsoft SQL Server connector tutorial yapýldý
+
+https://loopback.io/doc/en/lb3/Connecting-to-Microsoft-SQL-Server.html#6-create-the-collection-with-sample-data---automigration
+
+
+SQL Authentication ayarý yapýldý..sa kullanýcýna þifre verildi..Server Authentication ile baðlanmak için..
+
+
+SQL Conf. Managerdan TCP IP Enable edilerek 1433 portu açýldý..
+
+netstat -ano ile dinlenen ipler görüntülenerek 1433 kontrol edildi..
+
+loopbackde oluþturulan datasources.json dosyasý conf edildi
+
+migrate yapýldý ve sql tarafýnda database ve table oluþtu..
+
+new mission : SQL tarafýnda var olan databaseleri bulup onlarýn modellarýný oluþturan loopback app yapýlacak..
+

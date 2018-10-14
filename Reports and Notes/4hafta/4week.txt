@@ -1,0 +1,73 @@
+React Native get started tutorialý yapýldý;
+
+Node js kuruldu
+
+Telefona Expo client kuruldu..
+
+ //Expo da share kýsmýndan QR taratýnca çalýþtý..
+
+
+Pc ye chocolatey kuruldu
+
+choco ile python 2 ve JDK 8 kuruldu..
+
+
+React docs okundu..
+
+Redux getting started a baþlandý..
+
+Enforcing that every change is described as an action lets us have a clear understanding of what’s going on in the app.
+If something changed, we know why it changed. Actions are like breadcrumbs of what has happened. Finally, to tie state and actions together,
+we write a function called a reducer.
+
+
+State ve action larý baðlamak için reduce adýnda bir fonksiyon kullanýlýyor.
+
+
+Redux tutoriallarýna bakýldý..
+
+SQL express edition kuruldu..
+
+loopback getting started yapýldý.
+
+SQL Server Managament Studio kuruldu..
+
+loopback Microsoft SQL Server connector tutorial yapýldý
+
+https://loopback.io/doc/en/lb3/Connecting-to-Microsoft-SQL-Server.html#6-create-the-collection-with-sample-data---automigration
+
+
+SQL Authentication ayarý yapýldý..sa kullanýcýna þifre verildi..Server Authentication ile baðlanmak için..
+
+
+SQL Conf. Managerdan TCP IP Enable edilerek 1433 portu açýldý..
+
+netstat -ano ile dinlenen ipler görüntülenerek 1433 kontrol edildi..
+
+loopbackde oluþturulan datasources.json dosyasý conf edildi
+
+migrate yapýldý ve sql tarafýnda database ve table oluþtu..
+
+new mission : SQL tarafýnda var olan databaseleri bulup onlarýn modellarýný oluþturan loopback app yapýlacak..
+
+
+
+https://github.com/strongloop/loopback.io/issues/347
+
+https://loopback.io/doc/en/lb3/Discovering-models-from-relational-databases.html
+
+loopback projesine devam edildi..
+
+discovering-models.js yaratýldý..
+
+
+diger pclerde sql serverda "sa" kullanýcýsý oluþturuldu ve þifre verildi ve 1433 portu açýldý..
+discovering models conf edilerek ayný ortamdaki baþka pcnin sql database indeki tablo verileri çekildi..
+
+
+DiscoverNew.js oluþturuldu..
+
+databaseden veriler tablolar halinde attributesleri ile çekildi.Her tablo bir json dosyasý olarak çekildi..
+
+
+

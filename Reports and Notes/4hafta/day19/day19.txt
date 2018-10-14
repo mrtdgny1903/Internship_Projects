@@ -1,0 +1,12 @@
+https://github.com/strongloop/loopback.io/issues/347
+
+https://loopback.io/doc/en/lb3/Discovering-models-from-relational-databases.html
+
+loopback projesine devam edildi..
+
+discovering-models.js yaratýldý..
+
+
+diger pclerde sql serverda "sa" kullanýcýsý oluþturuldu ve þifre verildi ve 1433 portu açýldý..
+discovering models conf edilerek ayný ortamdaki baþka pcnin sql database indeki tablo verileri çekildi..
+

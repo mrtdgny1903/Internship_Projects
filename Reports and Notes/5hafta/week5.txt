@@ -1,0 +1,21 @@
+Önceden mssql ve loopback kullanýlarak çekilen tablolar ve attributeler kullanýlarak verilerininde çekilmesi amaçlandý ve araþtýrýldý..(SQLite ile)
+
+node ile SQLite kuruldu (npm install sqlite3)
+
+
+sqlite3 kullanarak var olan modellerden tablolar oluþturulmasý hedeflendi..
+
+fakat loopback in automigrate autoupdate özellikleri sqlite için desteklenmediðinden baþka bir framework araþtýrýlmaya baþlandý..
+
+
+ES6 typescript araþtýrýldý.
+
+promise
+
+async / await 
+
+kavramlarý çalýþýldý..
+
+typescript ile multiple connection database çalýþýldý..
+
+typeorm kullanarak 2 tane connection oluþturuldu ve mssql de bir databaseden baþka database 1 tablo verileriyle aktarýldý..

@@ -1,0 +1,23 @@
+ Ext.create('Ext.data.Store', {
+    storeId: 'EmployeeStore',
+    fields:['name', 'lastName','active'],
+    data: [
+        { name: name, lastName: lastname, active: isActive },
+        { name: 'Bart', lastName: 'bart@simpsons.com', active: 'Active' },
+        { name: 'Homer', lastName: 'homer@simpsons.com', active: 'Active' },
+        { name: 'Marge', lastName: 'marge@simpsons.com', active: 'Active' }
+    ]
+});
+        Ext.create('Ext.grid.Panel', {
+    title: 'EmployeeStore',
+    store: Ext.data.StoreManager.lookup('EmployeeStore'),
+    columns: [
+        { text: 'Name', dataIndex: 'name' },
+        { text: 'Email', dataIndex: 'lastName', flex: 1 },
+        { text: 'Phone', dataIndex: 'active' }
+    ],
+    height: 400,
+    width: 900,
+            margin : "-300 10 10 0",
+    renderTo: Ext.getBody()
+});

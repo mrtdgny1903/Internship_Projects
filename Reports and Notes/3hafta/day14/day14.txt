@@ -1,0 +1,9 @@
+Jpa tutoriala baþlandý..
+
+Eclipse jpa projesi oluþturuldu ve mysql connector.jar dosyasý import edildi..
+
+mysql workbench kuruldu ve jpa için database oluþturuldu..
+
+XAMPP kuruldu..(sql server conf için)
+
+eclipse de oluþturulan projenin verileri sql workbenchde query yazarak çaðýrýldý..

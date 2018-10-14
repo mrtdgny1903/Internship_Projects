@@ -1,0 +1,3 @@
+DiscoverNew.js oluþturuldu..
+
+databaseden veriler tablolar halinde attributesleri ile çekildi.Her tablo bir json dosyasý olarak çekildi..

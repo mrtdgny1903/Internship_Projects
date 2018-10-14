@@ -1,0 +1,11 @@
+Sql Server Conf. Managera gir
+
+SQL Server Network Configuration
+	
+	Protocols for SQLEXPRESS
+
+			
+		TCP IP (Sag týk Proporties en altta IP All Tcp Port 1433
+
+			
+				Ok

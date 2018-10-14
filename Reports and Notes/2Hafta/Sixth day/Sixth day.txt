@@ -1,0 +1,12 @@
+Sencha Architect üzerinde çalýþýldý..
+
+Oluþturulan formda butonlara onlick eventleri eklendi
+
+Submit ve Get All olmak üzere 2 buton tanýmlandý
+
+Submit e basýldýgýnda post ile önceki tutorialda yapýlan rest api serverýna form verilerini yollayacak þekilde configure edildi.
+
+Get All a basýldýgýnda ise get le serverdaki datalarý çekecek þekilde configure edildi.
+
+
+Farklý domainler arasý veri yollamaya çalýþýrken CORS hatasý ile karþýlaþýldý ve araþtýrýlýp çözüldü..

@@ -1,0 +1,36 @@
+
+************************************************************Server Tarafýnda RestApiController ýn Altýna**************************************************************
+
+public class RestApiController{
+
+
+
+@Configuration
+    @EnableWebMvc
+    public class WebConfig extends WebMvcConfigurerAdapter {
+
+		@Override
+		public void addCorsMappings(CorsRegistry registry) {
+			registry.addMapping("/api/**")
+				.allowedOrigins("http://localhost:1841","*")                       >>>>>>>>>>>>>>>>>>>>>>>>Yýldýz hertürlü izin verir.
+				.allowedMethods("POST", "GET","PUT","DELETE");
+		}
+	}
+
+
+
+
+************************************************************Client Side***********************************************************************************************
+
+Ext.Ajax.request({
+            url: 'http://localhost:8080/SpringBootRestApi/api/user/',
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json','Access-Control-Allow-Origin': '*'},       <<**************** BU KISIM
+
+            params : {
+                id: true,
+                name: name,
+                lastName : lastname,
+                active: null
+            },
+        });

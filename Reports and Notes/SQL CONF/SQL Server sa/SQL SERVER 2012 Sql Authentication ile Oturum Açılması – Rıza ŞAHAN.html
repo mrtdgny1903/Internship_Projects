@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html class="wf-sourcesanspro-n4-active wf-sourcesanspro-n7-active wf-sourcesanspro-i4-active wf-ptsans-n7-active wf-sourcesanspro-i7-active wf-active" lang="tr-TR"><script src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/webfont.js" type="text/javascript" async=""></script><script type="text/javascript" charset="utf-8" id="zm-extension" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/webrtc-patch.js" async=""></script><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://rizasahan.wordpress.com/xmlrpc.php">
+
+<title>SQL SERVER 2012 Sql Authentication ile Oturum Açılması – Rıza ŞAHAN</title>
+<script type="text/javascript">
+  WebFontConfig = {"google":{"families":["PT+Sans:b:latin,latin-ext","Source+Sans+Pro:r,i,b,bi:latin,latin-ext"]}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://s0.wp.com/wp-content/plugins/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script><style id="jetpack-custom-fonts-css">.wf-active sub, .wf-active sup{font-size:97.5%}.wf-active small{font-size:97.5%}.wf-active big{font-size:162.5%}.wf-active body{font-family:"Source Sans Pro",sans-serif;font-size:23.4px}.wf-active button, .wf-active input, .wf-active select, .wf-active textarea{font-family:"Source Sans Pro",sans-serif}@media screen and (max-width: 47.2226em){.wf-active button, .wf-active input[type="button"], .wf-active input[type="reset"], .wf-active input[type="submit"]{font-size:1.083329em}}.wf-active #infinite-footer .blog-credits, .wf-active #infinite-footer .blog-info a{font-size:1.083329em}.wf-active #infinite-handle span{font-size:1.083329em}.wf-active h1{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active .site-title{font-style:normal;font-weight:700}.wf-active .site-description{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active h2{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active h3{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active h4{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active h5{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active h6{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active h1{font-style:normal;font-weight:700}.wf-active h2{font-style:normal;font-weight:700}.wf-active h3{font-style:normal;font-weight:700}.wf-active h4{font-style:normal;font-weight:700}.wf-active h5{font-style:normal;font-weight:700}.wf-active h6{font-style:normal;font-weight:700}.wf-active blockquote{font-family:"PT Sans",sans-serif;font-style:normal;font-weight:700}.wf-active blockquote blockquote{font-style:normal;font-weight:700}</style>
+<link rel="dns-prefetch" href="https://s2.wp.com/">
+<link rel="dns-prefetch" href="https://s1.wp.com/">
+<link rel="dns-prefetch" href="https://s0.wp.com/">
+<link rel="dns-prefetch" href="https://fonts.googleapis.com/">
+<link rel="alternate" type="application/rss+xml" title="Rıza ŞAHAN » Beslemesi" href="https://rizasahan.wordpress.com/feed/">
+<link rel="alternate" type="application/rss+xml" title="Rıza ŞAHAN » Yorum Beslemesi" href="https://rizasahan.wordpress.com/comments/feed/">
+<link rel="alternate" type="application/rss+xml" title="Rıza ŞAHAN » SQL SERVER 2012 Sql Authentication ile Oturum&nbsp;Açılması Yorum Beslemesi" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/feed/">
+	<script type="text/javascript">
+		/* <![CDATA[ */
+		function addLoadEvent(func) {
+			var oldonload = window.onload;
+			if (typeof window.onload != 'function') {
+				window.onload = func;
+			} else {
+				window.onload = function () {
+					oldonload();
+					func();
+				}
+			}
+		}
+		/* ]]> */
+	</script>
+			<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s0.wp.com\/wp-content\/mu-plugins\/wpcom-smileys\/twemoji\/2\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/s1.wp.com\/wp-includes\/js\/wp-emoji-release.min.js?m=1516999477h&ver=4.9.7"}};
+			!function(a,b,c){function d(a,b){var c=String.fromCharCode;l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,a),0,0);var d=k.toDataURL();l.clearRect(0,0,k.width,k.height),l.fillText(c.apply(this,b),0,0);var e=k.toDataURL();return d===e}function e(a){var b;if(!l||!l.fillText)return!1;switch(l.textBaseline="top",l.font="600 32px Arial",a){case"flag":return!(b=d([55356,56826,55356,56819],[55356,56826,8203,55356,56819]))&&(b=d([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]),!b);case"emoji":return b=d([55357,56692,8205,9792,65039],[55357,56692,8203,9792,65039]),!b}return!1}function f(a){var c=b.createElement("script");c.src=a,c.defer=c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var g,h,i,j,k=b.createElement("canvas"),l=k.getContext&&k.getContext("2d");for(j=Array("flag","emoji"),c.supports={everything:!0,everythingExceptFlag:!0},i=0;i<j.length;i++)c.supports[j[i]]=e(j[i]),c.supports.everything=c.supports.everything&&c.supports[j[i]],"flag"!==j[i]&&(c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&c.supports[j[i]]);c.supports.everythingExceptFlag=c.supports.everythingExceptFlag&&!c.supports.flag,c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.everything||(h=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",h,!1),a.addEventListener("load",h,!1)):(a.attachEvent("onload",h),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),g=c.source||{},g.concatemoji?f(g.concatemoji):g.wpemoji&&g.twemoji&&(f(g.twemoji),f(g.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script><script src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/wp-emoji-release.js" type="text/javascript" defer="defer"></script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel="stylesheet" id="all-css-0-1" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a_002.css" type="text/css" media="all">
+<link rel="stylesheet" id="sorbet-fonts-css" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/css.css" type="text/css" media="all">
+<link rel="stylesheet" id="all-css-2-1" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a.css" type="text/css" media="all">
+<link rel="stylesheet" id="print-css-3-1" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/global-print.css" type="text/css" media="print">
+<link rel="stylesheet" id="all-css-4-1" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a_003.css" type="text/css" media="all">
+<link rel="stylesheet" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/css_002.css" media="all"><script type="text/javascript">
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a_002.js"></script>
+<link rel="stylesheet" id="all-css-0-2" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/style.css" type="text/css" media="all">
+<!--[if lt IE 8]>
+<link rel='stylesheet' id='highlander-comments-ie7-css'  href='https://s2.wp.com/wp-content/mu-plugins/highlander-comments/style-ie7.css?m=1351637563h&#038;ver=20110606' type='text/css' media='all' />
+<![endif]-->
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://rizasahan.wordpress.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://s1.wp.com/wp-includes/wlwmanifest.xml"> 
+<link rel="prev" title="Server 2012 DHCP Backup ve Restore&nbsp;İşlemleri" href="https://rizasahan.wordpress.com/2013/05/17/server-2012-dhcp-backup-ve-restore-islemleri/">
+<link rel="next" title="Türkiye’deki tüm vExpert’ ler ÇözümPark Bilişim Portalı&nbsp;Ekibinden!!!" href="https://rizasahan.wordpress.com/2013/05/31/turkiyedeki-tum-vexpert-ler-cozumpark-bilisim-portali-ekibinden/">
+<meta name="generator" content="WordPress.com">
+<link rel="canonical" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/">
+<link rel="shortlink" href="https://wp.me/p154cL-19M">
+<link rel="alternate" type="application/json+oembed" href="https://public-api.wordpress.com/oembed/?format=json&amp;url=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F&amp;for=wpcom-auto-discovery"><link rel="alternate" type="application/xml+oembed" href="https://public-api.wordpress.com/oembed/?format=xml&amp;url=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F&amp;for=wpcom-auto-discovery">
+<!-- Jetpack Open Graph Tags -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="SQL SERVER 2012 Sql Authentication ile Oturum Açılması">
+<meta property="og:url" content="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/">
+<meta property="og:description" content="Sql server kurulum sırasında Windows Authentication modda kurulup Mixed mod seçilmez ise sadece Windows Authentication modda oturum açılabilmektedir. Bazı uygulamaların yazılım mimarisi gereği sade…">
+<meta property="article:published_time" content="2013-05-17T06:12:46+00:00">
+<meta property="article:modified_time" content="2013-05-17T06:13:06+00:00">
+<meta property="og:site_name" content="Rıza ŞAHAN">
+<meta property="og:image" content="https://rizasahan.files.wordpress.com/2013/05/151.jpg">
+<meta property="og:image:width" content="595">
+<meta property="og:image:height" content="478">
+<meta property="og:locale" content="tr_TR">
+<meta name="twitter:site" content="@wordpressdotcom">
+<meta name="twitter:text:title" content="SQL SERVER 2012 Sql Authentication ile Oturum&nbsp;Açılması">
+<meta name="twitter:card" content="summary">
+<meta property="fb:app_id" content="249643311490">
+<meta property="article:publisher" content="https://www.facebook.com/WordPresscom">
+
+<!-- End Jetpack Open Graph Tags -->
+<link rel="shortcut icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="icon" type="image/x-icon" href="https://s1.wp.com/i/favicon.ico" sizes="16x16 24x24 32x32 48x48">
+<link rel="apple-touch-icon-precomposed" href="https://s2.wp.com/i/webclip.png">
+<link rel="openid.server" href="https://rizasahan.wordpress.com/?openidserver=1">
+<link rel="openid.delegate" href="https://rizasahan.wordpress.com/">
+<link rel="search" type="application/opensearchdescription+xml" href="https://rizasahan.wordpress.com/osd.xml" title="Rıza ŞAHAN">
+<link rel="search" type="application/opensearchdescription+xml" href="https://s1.wp.com/opensearch.xml" title="WordPress.com">
+		<style type="text/css">
+			.recentcomments a {
+				display: inline !important;
+				padding: 0 !important;
+				margin: 0 !important;
+			}
+
+			table.recentcommentsavatartop img.avatar, table.recentcommentsavatarend img.avatar {
+				border: 0px;
+				margin: 0;
+			}
+
+			table.recentcommentsavatartop a, table.recentcommentsavatarend a {
+				border: 0px !important;
+				background-color: transparent !important;
+			}
+
+			td.recentcommentsavatarend, td.recentcommentsavatartop {
+				padding: 0px 0px 1px 0px;
+				margin: 0px;
+			}
+
+			td.recentcommentstextend {
+				border: none !important;
+				padding: 0px 0px 2px 10px;
+			}
+
+			.rtl td.recentcommentstextend {
+				padding: 0px 10px 2px 0px;
+			}
+
+			td.recentcommentstexttop {
+				border: none;
+				padding: 0px 0px 0px 10px;
+			}
+
+			.rtl td.recentcommentstexttop {
+				padding: 0px 10px 0px 0px;
+			}
+		</style>
+		<meta name="application-name" content="Rıza ŞAHAN"><meta name="msapplication-window" content="width=device-width;height=device-height"><meta name="msapplication-tooltip" content="Fanatik Beşiktaş Aşığının, Bilişim Günlüğü"><meta name="msapplication-task" content="name=Abone Ol;action-uri=https://rizasahan.wordpress.com/feed/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=Ücretsiz bir blog için kaydolun;action-uri=http://wordpress.com/signup/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Destek;action-uri=http://support.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="msapplication-task" content="name=WordPress.com Forumlar;action-uri=http://forums.wordpress.com/;icon-uri=https://s1.wp.com/i/favicon.ico"><meta name="description" content="Sql server kurulum sırasında Windows Authentication modda kurulup Mixed mod seçilmez ise sadece Windows Authentication modda oturum açılabilmektedir. Bazı uygulamaların yazılım mimarisi gereği sadece Sql Authentication ile çalışmak zorundadır. Bu nedenle bizde bu özelliği nasıl aktif edeceğimizi ele alacağız. Elimizde kurulu olan Sql Server 2012 ile Sql Authentication modda oturum açmak istediğimizde aşağıdaki hata bizi…">
+<link rel="amphtml" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/amp/"><style type="text/css" id="syntaxhighlighteranchor"></style>
+<style type="text/css"></style><script type="text/javascript" async="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a"></script><link rel="stylesheet" type="text/css" id="gravatar-card-css" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/hovercard.css"><link rel="stylesheet" type="text/css" id="gravatar-card-services-css" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/services.css"><script type="text/javascript" async="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a_002"></script></head>
+
+<body class="post-template-default single single-post postid-4450 single-format-standard mp6 customizer-styles-applied right-sidebar highlander-enabled highlander-light">
+<div id="page" class="hfeed site">
+		<header id="masthead" class="site-header" role="banner">
+				<div class="site-header-wrapper">
+			<div class="site-branding">
+				<h1 class="site-title"><a href="https://rizasahan.wordpress.com/" rel="home">Rıza ŞAHAN</a></h1>
+				<h2 class="site-description">Fanatik Beşiktaş Aşığının, Bilişim Günlüğü</h2>
+			</div>
+
+			<div class="toggles">
+				<div id="menu-toggle" class="toggle" title="Menü"><span class="screen-reader-text">Menü</span></div>
+												<div id="search-toggle" class="toggle" title="Ara"><span class="screen-reader-text">Ara</span></div>
+			</div>
+		</div>
+	</header><!-- #masthead -->
+	<div id="menu-toggle-nav" class="panel">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+			<div class="menu"><ul>
+<li><a href="https://rizasahan.wordpress.com/">Başlangıç</a></li><li class="page_item page-item-3628"><a href="https://rizasahan.wordpress.com/basari-hikayesi/">Başarı Hikayeleri</a></li>
+<li class="page_item page-item-3182"><a href="https://rizasahan.wordpress.com/danismanlik/">Danışmanlık</a></li>
+<li class="page_item page-item-5238"><a href="https://rizasahan.wordpress.com/download/">Download</a></li>
+<li class="page_item page-item-2"><a href="https://rizasahan.wordpress.com/about/">Hakkımda</a></li>
+<li class="page_item page-item-443"><a href="https://rizasahan.wordpress.com/contact/">İletişim</a></li>
+</ul></div>
+		</nav><!-- #site-navigation -->
+	</div>
+			<div id="search-toggle-nav" class="panel">
+		<div class="search-wrapper">
+			<form role="search" method="get" class="search-form" action="https://rizasahan.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">Arama:</span>
+		<input class="search-field" placeholder="Ara …" name="s" type="search">
+	</label>
+	<input class="search-submit" value="Ara" type="submit">
+</form>
+		</div>
+	</div>
+	<div id="content" class="site-content">
+
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
+
+		
+			
+<article id="post-4450" class="post-4450 post type-post status-publish format-standard hentry category-sql-server">
+	<header class="entry-header">
+				<h1 class="entry-title">SQL SERVER 2012 Sql Authentication ile Oturum&nbsp;Açılması</h1>	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<p>Sql server kurulum sırasında Windows Authentication modda kurulup 
+Mixed mod seçilmez ise sadece Windows Authentication modda oturum 
+açılabilmektedir. Bazı uygulamaların yazılım mimarisi gereği sadece Sql 
+Authentication ile çalışmak zorundadır. Bu nedenle bizde bu özelliği 
+nasıl aktif edeceğimizi ele alacağız.</p>
+<p>Elimizde kurulu olan Sql Server 2012 ile Sql Authentication modda oturum açmak istediğimizde aşağıdaki hata bizi karşılamakta.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/16.jpg"><img data-attachment-id="4451" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/1-11/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/16.jpg?w=646" data-orig-size="707,593" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="1" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/16.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/16.jpg?w=646?w=646" class="alignnone size-full wp-image-4451" alt="1" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/16.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/16.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/16.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/16.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/16.jpg 707w" sizes="(max-width: 646px) 100vw, 646px"></a><span id="more-4450"></span></p>
+<p>Bu nedenele Windows Authentication modda oturum açalım.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/21.jpg"><img data-attachment-id="4452" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/2-11/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/21.jpg?w=646" data-orig-size="426,323" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;RIZA SAHAN&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="2" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/21.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/21.jpg?w=646?w=426" class="alignnone size-full wp-image-4452" alt="2" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/21.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/21.jpg 426w, https://rizasahan.files.wordpress.com/2013/05/21.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/21.jpg?w=300 300w" sizes="(max-width: 426px) 100vw, 426px"></a></p>
+<p>Windows Authentication modda sorunsuzca oturum açıldı.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/31.jpg"><img data-attachment-id="4453" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/3-10/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/31.jpg?w=646" data-orig-size="772,589" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;RIZA SAHAN&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1368625027&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="3" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/31.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/31.jpg?w=646?w=646" class="alignnone size-full wp-image-4453" alt="3" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/31.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/31.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/31.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/31.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/31.jpg?w=768 768w, https://rizasahan.files.wordpress.com/2013/05/31.jpg 772w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Security altında yer alan logins kısmına baktığımızda kurulumun 
+Windows Authentication modda yapılmış olmasından dolayı 
+varsayılanda&nbsp; <b>“sa” </b>kullanıcısının disable olarak geldiğini görmekteyiz.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/41.jpg"><img data-attachment-id="4454" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/4-10/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/41.jpg?w=646" data-orig-size="771,621" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="4" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/41.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/41.jpg?w=646?w=646" class="alignnone size-full wp-image-4454" alt="4" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/41.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/41.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/41.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/41.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/41.jpg?w=768 768w, https://rizasahan.files.wordpress.com/2013/05/41.jpg 771w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>SQL Authentication modda oturum yapabilmek için instance üzerinde sağ tıklayarak <b>“properties“</b> menüsüne giriş yapalım.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/51.jpg"><img data-attachment-id="4455" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/5-9/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/51.jpg?w=646" data-orig-size="771,621" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="5" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/51.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/51.jpg?w=646?w=646" class="alignnone size-full wp-image-4455" alt="5" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/51.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/51.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/51.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/51.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/51.jpg?w=768 768w, https://rizasahan.files.wordpress.com/2013/05/51.jpg 771w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Açılan ekranda <b>“Sql Server and Windows Authentication mode”</b> seçimini yaparak hem Windows hem Sql Authentication oturum açabilir duruma geleceğiz.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/61.jpg"><img data-attachment-id="4456" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/6-10/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/61.jpg?w=646" data-orig-size="699,630" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="6" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/61.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/61.jpg?w=646?w=646" class="alignnone size-full wp-image-4456" alt="6" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/61.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/61.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/61.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/61.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/61.jpg 699w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Yukarıdaki ekranı “OK” ile geçtikten sonra işlemin geçerli olabilmesi
+ için SQL Server servisini yeniden başlatmamız gerektiği bilgisi bize 
+aktarılmaktadır. <b>“OK”</b> tıklayarak bu ekranı geçelim.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/71.jpg"><img data-attachment-id="4457" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/7-10/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/71.jpg?w=646" data-orig-size="619,136" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;RIZA SAHAN&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1368625288&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="7" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/71.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/71.jpg?w=646?w=619" class="alignnone size-full wp-image-4457" alt="7" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/71.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/71.jpg 619w, https://rizasahan.files.wordpress.com/2013/05/71.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/71.jpg?w=300 300w" sizes="(max-width: 619px) 100vw, 619px"></a></p>
+<p>Yukarıdaki işlemi tamamladıktan sonra <b>“sa” </b>kullanıcısını enable hale getirmemiz gerekmektedir. Bu nedenle <b>“sa”</b> kullanıcısı üzerinde sağ tıklayarak <b>“properties”</b> menüsünü açalım.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/81.jpg"><img data-attachment-id="4458" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/8-10/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/81.jpg?w=646" data-orig-size="769,621" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="8" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/81.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/81.jpg?w=646?w=646" class="alignnone size-full wp-image-4458" alt="8" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/81.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/81.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/81.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/81.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/81.jpg?w=768 768w, https://rizasahan.files.wordpress.com/2013/05/81.jpg 769w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Açılan ekrandaki <b>“General” </b>tabında <b>“sa”</b> kullanıcımıza bir şifre verelim.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/91.jpg"><img data-attachment-id="4459" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/9-9/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/91.jpg?w=646" data-orig-size="701,632" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;RIZA SAHAN&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1368625479&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="9" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/91.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/91.jpg?w=646?w=646" class="alignnone size-full wp-image-4459" alt="9" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/91.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/91.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/91.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/91.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/91.jpg 701w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p><b>“Server Role”</b> tabında ise <b>“Login”</b> kısmını <b>“Enable”</b> duruma getirelim ve <b>“OK”</b> ile tamamlayalım.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/101.jpg"><img data-attachment-id="4460" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/10-9/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/101.jpg?w=646" data-orig-size="701,630" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="10" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/101.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/101.jpg?w=646?w=646" class="alignnone size-full wp-image-4460" alt="10" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/101.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/101.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/101.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/101.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/101.jpg 701w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Resimde de görüldüğü gibi <b>“sa”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </b> kullanıcısı üzerindeki kırmızı ok kalktı ve aktif hale geldi.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/111.jpg"><img data-attachment-id="4461" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/11-9/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/111.jpg?w=646" data-orig-size="336,505" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;RIZA SAHAN&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1368625602&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="11" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/111.jpg?w=646?w=200" data-large-file="https://rizasahan.files.wordpress.com/2013/05/111.jpg?w=646?w=336" class="alignnone size-full wp-image-4461" alt="11" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/111.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/111.jpg 336w, https://rizasahan.files.wordpress.com/2013/05/111.jpg?w=100 100w, https://rizasahan.files.wordpress.com/2013/05/111.jpg?w=200 200w" sizes="(max-width: 336px) 100vw, 336px"></a></p>
+<p>Şimdi tekrardan <b>“SQL Authentication”</b> modda oturum açmaya çalıştığımızda yine hata almaktayız.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/121.jpg"><img data-attachment-id="4462" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/12-8/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/121.jpg?w=646" data-orig-size="630,489" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="12" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/121.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/121.jpg?w=646?w=630" class="alignnone size-full wp-image-4462" alt="12" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/121.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/121.jpg 630w, https://rizasahan.files.wordpress.com/2013/05/121.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/121.jpg?w=300 300w" sizes="(max-width: 630px) 100vw, 630px"></a></p>
+<p>Yaptığımız işlemlerin tamamının aktif olabilmesi adına <b>“SQL Server”</b> servisini yeniden başlatmamız gerekmektedir. Bu nedenle <b>“SQL Server”</b> servisine sağ tıklayarak <b>“Restart”</b> edelim.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/131.jpg"><img data-attachment-id="4463" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/13-8/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/131.jpg?w=646" data-orig-size="820,598" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="13" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/131.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/131.jpg?w=646?w=646" class="alignnone size-full wp-image-4463" alt="13" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/131.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/131.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/131.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/131.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/131.jpg?w=768 768w, https://rizasahan.files.wordpress.com/2013/05/131.jpg 820w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Şimdi tekrardan <b>“SQL Authentication”</b> modda oturum açmayı deneyelim.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/141.jpg"><img data-attachment-id="4464" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/14-8/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/141.jpg?w=646" data-orig-size="426,323" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;RIZA SAHAN&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;1368625751&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="14" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/141.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/141.jpg?w=646?w=426" class="alignnone size-full wp-image-4464" alt="14" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/141.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/141.jpg 426w, https://rizasahan.files.wordpress.com/2013/05/141.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/141.jpg?w=300 300w" sizes="(max-width: 426px) 100vw, 426px"></a></p>
+<p>Şu anda instance ekranında görüldüğü gibi <b>“SQL Authentication”</b> modda <b>“sa”</b> kullanıcısı ile oturum açmış durumdayız.</p>
+<p><a href="https://rizasahan.files.wordpress.com/2013/05/151.jpg"><img data-attachment-id="4465" data-permalink="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/15-8/" data-orig-file="https://rizasahan.files.wordpress.com/2013/05/151.jpg?w=646" data-orig-size="772,621" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;}" data-image-title="15" data-image-description="" data-medium-file="https://rizasahan.files.wordpress.com/2013/05/151.jpg?w=646?w=300" data-large-file="https://rizasahan.files.wordpress.com/2013/05/151.jpg?w=646?w=646" class="alignnone size-full wp-image-4465" alt="15" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/151.jpg" srcset="https://rizasahan.files.wordpress.com/2013/05/151.jpg?w=646 646w, https://rizasahan.files.wordpress.com/2013/05/151.jpg?w=150 150w, https://rizasahan.files.wordpress.com/2013/05/151.jpg?w=300 300w, https://rizasahan.files.wordpress.com/2013/05/151.jpg?w=768 768w, https://rizasahan.files.wordpress.com/2013/05/151.jpg 772w" sizes="(max-width: 646px) 100vw, 646px"></a></p>
+<p>Umarım yararlı olmuştur. Bir başka makalede görüşmek dileği ile.</p>
+<div id="jp-post-flair" class="sharedaddy sd-like-enabled"><div class="sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-loaded" id="like-post-wrapper-15984143-4450-5b4f565d465fd" data-src="//widgets.wp.com/likes/index.html?ver=20180319#blog_id=15984143&amp;post_id=4450&amp;origin=rizasahan.wordpress.com&amp;obj_id=15984143-4450-5b4f565d465fd" data-name="like-post-frame-15984143-4450-5b4f565d465fd"><h3 class="sd-title">Bunu beğen:</h3><div class="likes-widget-placeholder post-likes-widget-placeholder" style="height: 55px; display: none;"><span class="button"><span>Beğen</span></span> <span class="loading">Yükleniyor...</span></div><iframe class="post-likes-widget jetpack-likes-widget" name="like-post-frame-15984143-4450-5b4f565d465fd" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/index.html" width="100%" height="55px" frameborder="0"></iframe><span class="sd-text-color"></span><a class="sd-link-color"></a></div>
+<div id="jp-relatedposts" class="jp-relatedposts" style="display: block;">
+	<h3 class="jp-relatedposts-headline"><em>İlgili</em></h3>
+<div class="jp-relatedposts-items jp-relatedposts-items-minimal"><p class="jp-relatedposts-post jp-relatedposts-post0" data-post-id="8408" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://rizasahan.wordpress.com/2017/11/28/sql-server-2017-kurulumu/" title="SQL Server 2017 Kurulumu
+
+Bu makalemizde Ekim 2017 tarihinde kararlı sürümü piyasaya sürülen SQL Server 2017 ürününün kurulumunu ele alıyor olacağız. Makalemizde SQL 2017 kurulumunu ele alıp yeniliklerine yer vermeyeceğiz. 2017 ile birlikte gelen en temel özellikler performans iyileştirmesi ve Linux tarafındaki ilk sürüm niteliğinde olmasıdır. Genel olarak günümüzde aktif olarak aşağıdaki versiyonlar kullanılmaktadır.…" rel="nofollow" data-origin="4450" data-position="0">SQL Server 2017 Kurulumu</a></span><span class="jp-relatedposts-post-context">"Sql Server" içinde</span></p><p class="jp-relatedposts-post jp-relatedposts-post1" data-post-id="8853" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://rizasahan.wordpress.com/2018/03/24/windows-server-2019-preview-kurulumu/" title="Windows Server 2019 Preview Kurulumu
+
+Makalemizde bu hafta preview sürümü yayımlanan Windows Server 2019 ürününden bahsediyor olacağız. Microsoft Server işletim sistemlerinde 4 yıllık bir periyot izlemesine karşın bu sene Server 2019 Preview ile biraz değişime gitti gibi. Ancak ürünün tam kararlı sürümünün yayımlanması lazım ki, ona göre kesin yargıya varalım. Artık çok sık ara güncelleme,…" rel="nofollow" data-origin="4450" data-position="1">Windows Server 2019 Preview Kurulumu</a></span><span class="jp-relatedposts-post-context"></span></p><p class="jp-relatedposts-post jp-relatedposts-post2" data-post-id="4394" data-post-format="false"><span class="jp-relatedposts-post-title"><a class="jp-relatedposts-post-a" href="https://rizasahan.wordpress.com/2013/04/17/sql-server-2012-firewall-ve-genel-baglanti-ayarlari/" title="SQL Server 2012 Firewall ve Genel Bağlantı Ayarları
+
+&nbsp; &nbsp; Bundan önceki makalelerimizde Admin seviyesinde yönetimlere hitaben SQL Server 2012 kurulumu, SQL Server 2012 Yedekleme gibi konulara değinmiştik. Bu makalemizde ise ortamımızda bulunan bir yazılım ve bu yazılımdan SQL Servere yapılacak bağlantıyı ele alacağız. &nbsp; Şu anda kurulu olan Sql Server 2012 sistemimiz üzerinde “COZUMPARK” isminde bir veritabanı…" rel="nofollow" data-origin="4450" data-position="2">SQL Server 2012 Firewall ve Genel Bağlantı Ayarları</a></span><span class="jp-relatedposts-post-context">"Sql Server" içinde</span></p></div></div></div>			</div><!-- .entry-content -->
+
+	<footer class="entry-meta">
+		<span class="post-date"><a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/" title="06:12" rel="bookmark"><time class="entry-date" datetime="2013-05-17T06:12:46+00:00">17 May 2013</time></a></span><span class="byline"><span class="author vcard"><a class="url fn n" href="https://rizasahan.wordpress.com/author/rizasahan/" title="rizasahan tarafından yazılan tüm gönderileri görüntüle" rel="author">rizasahan</a></span></span>					</footer><!-- .entry-meta -->
+</article><!-- #post-## -->
+
+				<nav class="navigation post-navigation" role="navigation">
+		<h1 class="screen-reader-text">Yazı dolaşımı</h1>
+		<div class="nav-links">
+			<div class="nav-previous"><a href="https://rizasahan.wordpress.com/2013/05/17/server-2012-dhcp-backup-ve-restore-islemleri/" rel="prev"><span class="meta-nav screen-reader-text">←</span></a></div><div class="nav-next"><a href="https://rizasahan.wordpress.com/2013/05/31/turkiyedeki-tum-vexpert-ler-cozumpark-bilisim-portali-ekibinden/" rel="next"><span class="meta-nav screen-reader-text">→</span></a></div>		</div><!-- .nav-links -->
+	</nav><!-- .navigation -->
+	
+			
+<div id="comments" class="comments-area">
+
+	
+			<h2 class="comments-title">
+			‘<span>SQL SERVER 2012 Sql Authentication ile Oturum&nbsp;Açılması</span>’ için 10 yanıt		</h2>
+
+		
+		<ol class="comment-list">
+			
+	<li id="comment-595" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-595" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/9e76ef8201a74d6ff4bd176a97431648.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-9e76ef8201a74d6ff4bd176a97431648-0" width="80" height="80"></span>					<cite class="fn">DmR</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Bilgi için Teşekkürler çok işime yaradı makale. Nacizane bir 
+düzetme yapmak istiyorum. sa properties de enable seçeneği “Status” 
+tabında. Server Ruleste başka bilgiler var.(SQL Server 2012 
+kullanıyorum)</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=595#respond" onclick='return addComment.moveForm( "div-comment-595", "595", "respond", "4450" )' aria-label="Cevap DmR ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-595">
+					<time datetime="2015-05-03T19:12:03+00:00">
+						<span class="post-date">03 May 2015 at 19:12</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-601" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-601" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/6fc88d50b4c8024bb86ed84bf6e8d4f2.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-6fc88d50b4c8024bb86ed84bf6e8d4f2-0" width="80" height="80"></span>					<cite class="fn">asd</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Teşekkürler faydalı bir yazı olmuş. DmR nin yaptığı düzeltme doğru.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=601#respond" onclick='return addComment.moveForm( "div-comment-601", "601", "respond", "4450" )' aria-label="Cevap asd ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-601">
+					<time datetime="2015-06-06T02:51:14+00:00">
+						<span class="post-date">06 Haz 2015 at 02:51</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-619" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-619" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a1e67c4f132122444b93869c3a5bbb3d.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-a1e67c4f132122444b93869c3a5bbb3d-0" width="80" height="80"></span>					<cite class="fn">ismail</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>eyvallah</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=619#respond" onclick='return addComment.moveForm( "div-comment-619", "619", "respond", "4450" )' aria-label="Cevap ismail ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-619">
+					<time datetime="2015-12-10T15:35:33+00:00">
+						<span class="post-date">10 Ara 2015 at 15:35</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-620" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-620" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/97ea83e20520d85a728f38950fcc1e7f.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-97ea83e20520d85a728f38950fcc1e7f-0" width="80" height="80"></span>					<cite class="fn"><a href="http://www.csharpkampusu.com/" rel="external nofollow" class="url">Veysel</a></cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>thank you</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=620#respond" onclick='return addComment.moveForm( "div-comment-620", "620", "respond", "4450" )' aria-label="Cevap Veysel ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-620">
+					<time datetime="2016-03-07T08:08:36+00:00">
+						<span class="post-date">07 Mar 2016 at 08:08</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-640" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-640" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/504f2946c7530bff086661b7db5d07f0.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-504f2946c7530bff086661b7db5d07f0-0" width="80" height="80"></span>					<cite class="fn">beyaz</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>çok faydalı bir yazıydı gerçekten. teşekkürler emeğin için.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=640#respond" onclick='return addComment.moveForm( "div-comment-640", "640", "respond", "4450" )' aria-label="Cevap beyaz ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-640">
+					<time datetime="2016-12-28T11:39:21+00:00">
+						<span class="post-date">28 Ara 2016 at 11:39</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-708" class="comment odd alt thread-odd thread-alt depth-1 highlander-comment">
+		<article id="div-comment-708" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/d637f770b63fd185c4326fe1435b6693.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-d637f770b63fd185c4326fe1435b6693-0" width="80" height="80"></span>					<cite class="fn">Mertalp</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>gerçekten çok teşekkür ederim çok iyi bi döküman olmuş.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=708#respond" onclick='return addComment.moveForm( "div-comment-708", "708", "respond", "4450" )' aria-label="Cevap Mertalp ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-708">
+					<time datetime="2017-06-20T07:32:47+00:00">
+						<span class="post-date">20 Haz 2017 at 07:32</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-858" class="comment even thread-even depth-1 highlander-comment">
+		<article id="div-comment-858" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/53945a8903e2d7df3db304a6c963375a.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-53945a8903e2d7df3db304a6c963375a-0" width="80" height="80"></span>					<cite class="fn">Erol ŞIVKIN</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Teşekkürler, çok faydalı bir makale.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=858#respond" onclick='return addComment.moveForm( "div-comment-858", "858", "respond", "4450" )' aria-label="Cevap Erol ŞIVKIN ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-858">
+					<time datetime="2017-11-05T11:23:55+00:00">
+						<span class="post-date">05 Kas 2017 at 11:23</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+
+	<li id="comment-940" class="comment odd alt thread-odd thread-alt depth-1 parent highlander-comment">
+		<article id="div-comment-940" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/7eaf67cf0435623eca30d99665def4cf.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-7eaf67cf0435623eca30d99665def4cf-0" width="80" height="80"></span>					<cite class="fn">muzaffer</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Çok teşekür ediyorum. Yeniden kurmaktan kurtuldum. Server’i</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=940#respond" onclick='return addComment.moveForm( "div-comment-940", "940", "respond", "4450" )' aria-label="Cevap muzaffer ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-940">
+					<time datetime="2018-05-20T16:48:45+00:00">
+						<span class="post-date">20 May 2018 at 16:48</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	<ul class="children">
+
+	<li id="comment-948" class="comment byuser comment-author-rizasahan bypostauthor even depth-2 highlander-comment">
+		<article id="div-comment-948" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/6d42f82a230bb6be48141c207f3a2f2d.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-6d42f82a230bb6be48141c207f3a2f2d-0" width="80" height="80"></span>					<cite class="fn"><a href="https://rizasahan.wordpress.com/" rel="external nofollow" class="url">rizasahan</a></cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Ben teşekkür ederim. Yararlı olabildiysem ne mutlu.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=948#respond" onclick='return addComment.moveForm( "div-comment-948", "948", "respond", "4450" )' aria-label="Cevap rizasahan ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-948">
+					<time datetime="2018-06-12T11:06:53+00:00">
+						<span class="post-date">12 Haz 2018 at 11:06</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+</ul><!-- .children -->
+</li><!-- #comment-## -->
+
+	<li id="comment-949" class="comment odd alt thread-even depth-1 highlander-comment">
+		<article id="div-comment-949" class="comment-body">
+			<footer class="comment-meta">
+				<div class="comment-author vcard">
+					<span class="avatar-wrapper"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/55ac728a11d6a178359da28e61659b55.png" class="avatar avatar-80 grav-hashed grav-hijack" id="grav-55ac728a11d6a178359da28e61659b55-0" width="80" height="80"></span>					<cite class="fn">Turgay Kurt</cite> <span class="says">dedi ki:</span>				</div><!-- .comment-author -->
+
+							</footer><!-- .comment-meta -->
+
+			<div class="comment-content">
+				<p>Basit ve güzel bir anlatım olmuş Teşekkürler.</p>
+			</div><!-- .comment-content -->
+
+			<div class="comment-metadata">
+				<div class="reply"><a rel="nofollow" class="comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/?replytocom=949#respond" onclick='return addComment.moveForm( "div-comment-949", "949", "respond", "4450" )' aria-label="Cevap Turgay Kurt ">Cevapla</a></div>				<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#comment-949">
+					<time datetime="2018-06-12T15:07:18+00:00">
+						<span class="post-date">12 Haz 2018 at 15:07</span>
+					</time>
+				</a>
+							</div><!-- .comment-metadata -->
+		</article><!-- .comment-body -->
+
+	</li><!-- #comment-## -->
+		</ol><!-- .comment-list -->
+
+		
+	
+	
+		<div id="respond" class="comment-respond js">
+		<h3 id="reply-title" class="comment-reply-title">Bir Cevap Yazın <small><a rel="nofollow" id="cancel-comment-reply-link" href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/#respond" style="display:none;">Cevabı iptal et</a></small></h3>			<form action="https://rizasahan.wordpress.com/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+				<input id="highlander_comment_nonce" name="highlander_comment_nonce" value="6e0353390a" type="hidden"><input name="_wp_http_referer" value="/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/" type="hidden">
+<input name="hc_post_as" id="hc_post_as" value="guest" type="hidden">
+
+<div class="comment-form-field comment-textarea">
+	
+	<div id="comment-form-comment"><textarea tabindex="-1" style="position: absolute; top: -999px; left: 0px; right: auto; bottom: auto; border: 0px none; padding: 0px; box-sizing: content-box; overflow-wrap: break-word; height: 0px !important; min-height: 0px !important; overflow: hidden; transition: none 0s ease 0s; font-family: Arial, Helvetica, Tahoma, Verdana, sans-serif; font-size: 14px; font-weight: 400; font-style: normal; letter-spacing: 0px; text-transform: none; text-decoration: none; word-spacing: 0px; text-indent: 0px; line-height: 17px; width: 624px;" class="autosizejs ">Yorumunuzu buraya yazın...</textarea><textarea id="comment" name="comment" title="Yorumunuzu buraya yazın..." placeholder="Yorumunuzu buraya yazın..." style="height: 37px; overflow: hidden; overflow-wrap: break-word; resize: none;"></textarea></div>
+</div>
+
+<div id="comment-form-identity" style="display: none;">
+	<div id="comment-form-nascar">
+		<p>Aşağıya bilgilerinizi girin veya oturum açmak için bir simgeye tıklayın:</p>
+		<ul>
+			<li class="selected" style="display:none;">
+				<a href="#comment-form-guest" id="postas-guest" class="nascar-signin-link" title="Login via Konuk">
+									</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:WordPress.com" id="postas-wordpress" class="nascar-signin-link" title="Login via WordPress.com">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></g></svg>				</a>
+			</li>
+			<li>
+			<iframe id="googleplus-sign-in" name="googleplus-sign-in" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a.html" scrolling="no" allowtransparency="true" seamless="seamless" width="24" height="24" frameborder="0"></iframe>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Twitter" id="postas-twitter" class="nascar-signin-link" title="Login via Twitter">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"></path></g></svg>				</a>
+			</li>
+			<li>
+				<a href="#comment-form-load-service:Facebook" id="postas-facebook" class="nascar-signin-link" title="Login via Facebook">
+					<svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"></path></g></svg>				</a>
+			</li>
+		</ul>
+	</div>
+
+	<div id="comment-form-guest" class="comment-form-service selected">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+<a href="https://gravatar.com/site/signup/" target="_blank">				<img src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/ad516503a11cd5ca435acc9bb6523536.png" alt="Gravatar" class="no-grav" width="25">
+</a>			</div>
+
+				<div class="comment-form-fields">
+				<div class="comment-form-field comment-form-email">
+					<label for="email">E-posta <span class="required">(gerekli)</span> <span class="nopublish">(Adres hiçbir zaman paylaşılmayacaktır)</span></label>
+					<div class="comment-form-input"><input id="email" name="email" type="email"></div>
+				</div>
+				<div class="comment-form-field comment-form-author">
+					<label for="author">İsim <span class="required">(gerekli)</span></label>
+					<div class="comment-form-input"><input id="author" name="author" type="text"></div>
+				</div>
+				<div class="comment-form-field comment-form-url">
+					<label for="url">İnternet sitesi</label>
+					<div class="comment-form-input"><input id="url" name="url" type="url"></div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div id="comment-form-wordpress" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/ad516503a11cd5ca435acc9bb6523536.png" alt="WordPress.com Logosu" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="wp_avatar" id="wordpress-avatar" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_user_id" id="wordpress-user_id" class="comment-meta-wordpress" value="" type="hidden">
+				<input name="wp_access_token" id="wordpress-access_token" class="comment-meta-wordpress" value="" type="hidden">
+						<p class="comment-form-posting-as pa-wordpress">
+			<strong></strong>
+			<span class="skimlinks-unlinked">WordPress.com</span> hesabınızı kullanarak yorum yapıyorsunuz.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'wordpress'%20);">Çıkış&nbsp; Yap</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Değiştir</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#0087be" d="M12.158 12.786l-2.698 7.84c.806.236 1.657.365 2.54.365 1.047 0 2.05-.18 2.986-.51-.024-.037-.046-.078-.065-.123l-2.762-7.57zM3.008 12c0 3.56 2.07 6.634 5.068 8.092L3.788 8.342c-.5 1.117-.78 2.354-.78 3.658zm15.06-.454c0-1.112-.398-1.88-.74-2.48-.456-.74-.883-1.368-.883-2.11 0-.825.627-1.595 1.51-1.595.04 0 .078.006.116.008-1.598-1.464-3.73-2.36-6.07-2.36-3.14 0-5.904 1.613-7.512 4.053.21.008.41.012.58.012.94 0 2.395-.114 2.395-.114.484-.028.54.684.057.74 0 0-.487.058-1.03.086l3.275 9.74 1.968-5.902-1.4-3.838c-.485-.028-.944-.085-.944-.085-.486-.03-.43-.77.056-.742 0 0 1.484.114 2.368.114.94 0 2.397-.114 2.397-.114.486-.028.543.684.058.74 0 0-.488.058-1.03.086l3.25 9.665.897-2.997c.456-1.17.684-2.137.684-2.907zm1.82-3.86c.04.286.06.593.06.924 0 .912-.17 1.938-.683 3.22l-2.746 7.94c2.672-1.558 4.47-4.454 4.47-7.77 0-1.564-.4-3.033-1.1-4.314zM12 22C6.486 22 2 17.514 2 12S6.486 2 12 2s10 4.486 10 10-4.486 10-10 10z"></path></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-googleplus" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/ad516503a11cd5ca435acc9bb6523536.png" alt="Google+ fotoğrafı" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="googleplus_avatar" id="googleplus-avatar" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_user_id" id="googleplus-user_id" class="comment-meta-googleplus" value="" type="hidden">
+				<input name="googleplus_access_token" id="googleplus-access_token" class="comment-meta-googleplus" value="" type="hidden">
+						<p class="comment-form-posting-as pa-googleplus">
+			<strong></strong>
+			Google+ hesabınızı kullanarak yorum yapıyorsunuz.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'googleplus'%20);">Çıkış&nbsp; Yap</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Değiştir</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" x="0px" y="0px" viewBox="0 0 60 60"><path fill="#519bf7" d="M56.3,30c0,-1.6 -0.2,-3.4 -0.6,-5h-3.1H42.2H30v10.6h14.8C44,39.3 42,42 39.1,43.9l8.8,6.8C53,46 56.3,39 56.3,30z"></path><path fill="#3db366" d="M30,57.5c6.7,0 13.1,-2.4 17.9,-6.8l-8.8,-6.8c-2.5,1.6 -5.6,2.4 -9.1,2.4c-7.2,0 -13.3,-4.7 -15.4,-11.2l-9.3,7.1C9.8,51.3 19.1,57.5 30,57.5z"></path><path fill="#fdc600" d="M5.3,42.2l9.3,-7.1c-0.5,-1.6 -0.8,-3.3 -0.8,-5.1s0.3,-3.5 0.8,-5.1l-9.3,-7.1C3.5,21.5 2.5,25.6 2.5,30S3.5,38.5 5.3,42.2z"></path><path fill="#f15b44" d="M40.1,17.4l8,-8C43.3,5.1 37,2.5 30,2.5C19.1,2.5 9.8,8.7 5.3,17.8l9.3,7.1c2.1,-6.5 8.2,-11.1 15.4,-11.1C33.9,13.7 37.4,15.1 40.1,17.4z"></path></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-twitter" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/ad516503a11cd5ca435acc9bb6523536.png" alt="Twitter resmi" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="twitter_avatar" id="twitter-avatar" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_user_id" id="twitter-user_id" class="comment-meta-twitter" value="" type="hidden">
+				<input name="twitter_access_token" id="twitter-access_token" class="comment-meta-twitter" value="" type="hidden">
+						<p class="comment-form-posting-as pa-twitter">
+			<strong></strong>
+			Twitter hesabınızı kullanarak yorum yapıyorsunuz.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'twitter'%20);">Çıkış&nbsp; Yap</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Değiştir</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#1DA1F2" d="M22.23 5.924c-.736.326-1.527.547-2.357.646.847-.508 1.498-1.312 1.804-2.27-.793.47-1.67.812-2.606.996C18.325 4.498 17.258 4 16.078 4c-2.266 0-4.103 1.837-4.103 4.103 0 .322.036.635.106.935-3.41-.17-6.433-1.804-8.457-4.287-.353.607-.556 1.312-.556 2.064 0 1.424.724 2.68 1.825 3.415-.673-.022-1.305-.207-1.86-.514v.052c0 1.988 1.415 3.647 3.293 4.023-.344.095-.707.145-1.08.145-.265 0-.522-.026-.773-.074.522 1.63 2.038 2.817 3.833 2.85-1.404 1.1-3.174 1.757-5.096 1.757-.332 0-.66-.02-.98-.057 1.816 1.164 3.973 1.843 6.29 1.843 7.547 0 11.675-6.252 11.675-11.675 0-.178-.004-.355-.012-.53.802-.578 1.497-1.3 2.047-2.124z"></path></g></svg></span>
+		</p>
+					</div>
+	
+		</div>
+	</div>
+
+	<div id="comment-form-facebook" class="comment-form-service">
+		<div class="comment-form-padder">
+			<div class="comment-form-avatar">
+				<img src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/ad516503a11cd5ca435acc9bb6523536.png" alt="Facebook fotoğrafı" class="no-grav" width="25">
+			</div>
+
+				<div class="comment-form-fields">
+				<input name="fb_avatar" id="facebook-avatar" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_user_id" id="facebook-user_id" class="comment-meta-facebook" value="" type="hidden">
+				<input name="fb_access_token" id="facebook-access_token" class="comment-meta-facebook" value="" type="hidden">
+						<p class="comment-form-posting-as pa-facebook">
+			<strong></strong>
+			Facebook hesabınızı kullanarak yorum yapıyorsunuz.			<span class="comment-form-log-out">
+				(&nbsp;<a href="javascript:HighlanderComments.doExternalLogout(%20'facebook'%20);">Çıkış&nbsp; Yap</a>&nbsp;/&nbsp;
+				<a href="#" onclick="javascript:HighlanderComments.switchAccount();return false;">Değiştir</a>&nbsp;)
+			</span>
+			<span class="pa-icon"><svg xmlns="http://www.w3.org/2000/svg" role="presentation" viewBox="0 0 24 24"><rect x="0" fill="none" width="24" height="24"></rect><g><path fill="#3B5998" d="M20.007 3H3.993C3.445 3 3 3.445 3 3.993v16.013c0 .55.445.994.993.994h8.62v-6.97H10.27V11.31h2.346V9.31c0-2.325 1.42-3.59 3.494-3.59.993 0 1.847.073 2.096.106v2.43h-1.438c-1.128 0-1.346.537-1.346 1.324v1.734h2.69l-.35 2.717h-2.34V21h4.587c.548 0 .993-.445.993-.993V3.993c0-.548-.445-.993-.993-.993z"></path></g></svg></span>
+		</p>
+		w
+			</div>
+	
+		</div>
+	</div>
+
+
+	<div id="comment-form-load-service" class="comment-form-service">
+		<div class="comment-form-posting-as-cancel"><a href="javascript:HighlanderComments.cancelExternalWindow();">Vazgeç</a></div>
+		<p>Connecting to %s</p>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+var highlander_expando_javascript = function(){
+	var input = document.createElement( 'input' ),
+	    comment = jQuery( '#comment' );
+
+	if ( 'placeholder' in input ) {
+		comment.attr( 'placeholder', jQuery( '.comment-textarea label' ).remove().text() );
+	}
+
+	// Expando Mode: start small, then auto-resize on first click + text length
+	jQuery( '#comment-form-identity' ).hide();
+	jQuery( '#comment-form-subscribe' ).hide();
+	jQuery( '#commentform .form-submit' ).hide();
+
+	comment.css( { 'height':'10px' } ).one( 'focus', function() {
+		var timer = setInterval( HighlanderComments.resizeCallback, 10 )
+		jQuery( this ).animate( { 'height': HighlanderComments.initialHeight } ).delay( 100 ).queue( function(n) { clearInterval( timer ); HighlanderComments.resizeCallback(); n(); } );
+		jQuery( '#comment-form-identity' ).slideDown();
+		jQuery( '#comment-form-subscribe' ).slideDown();
+		jQuery( '#commentform .form-submit' ).slideDown();
+	});
+}
+jQuery(document).ready( highlander_expando_javascript );
+</script>
+
+<div id="comment-form-subscribe" style="display: none;">
+	<p class="comment-subscription-form"><input name="subscribe" id="subscribe" value="subscribe" style="width: auto;" type="checkbox"> <label class="subscribe-label" id="subscribe-label" for="subscribe" style="display: inline;">Yeni yorumları bana e-posta ile bildir.</label></p></div>
+
+
+
+
+<p class="form-submit" style="display: none;"><input name="submit" id="comment-submit" class="submit" value="Yorum gönder" type="submit"> <input name="comment_post_ID" value="4450" id="comment_post_ID" type="hidden">
+<input name="comment_parent" id="comment_parent" value="0" type="hidden">
+</p><p style="display: none;"><input id="akismet_comment_nonce" name="akismet_comment_nonce" value="9a74a6491a" type="hidden"></p>
+<input name="genseq" value="1531926109" type="hidden">
+<p style="display: none;"></p>			<input id="ak_js" name="ak_js" value="1531926110304" type="hidden"></form>
+			</div><!-- #respond -->
+	<div style="clear: both"></div>
+</div><!-- #comments -->
+
+		
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<div id="secondary" class="widget-area" role="complementary">
+				<aside id="media_image-2" class="widget widget_media_image"><h1 class="widget-title">Çözümpark</h1><style>.widget.widget_media_image { overflow: hidden; }.widget.widget_media_image img { height: auto; max-width: 100%; }</style><a href="http://www.cozumpark.com/" class="" rel="" target=""><img class="image alignnone" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/125-x-125.png" alt="" width="125" height="125"></a></aside><aside id="categories-2" class="widget widget_categories"><h1 class="widget-title">Kategoriler</h1>		<ul>
+	<li class="cat-item cat-item-9925728"><a href="https://rizasahan.wordpress.com/category/3-party/">3.party</a> (23)
+</li>
+	<li class="cat-item cat-item-22320295"><a href="https://rizasahan.wordpress.com/category/antivirus-guvenlik/">Antivirus Güvenlik</a> (2)
+</li>
+	<li class="cat-item cat-item-7765292"><a href="https://rizasahan.wordpress.com/category/app-v/">App-v</a> (1)
+</li>
+	<li class="cat-item cat-item-66457437"><a href="https://rizasahan.wordpress.com/category/bulut-sistemler-cloud/">Bulut Sistemler (Cloud)</a> (34)
+</li>
+	<li class="cat-item cat-item-1122930"><a href="https://rizasahan.wordpress.com/category/donanim-inceleme/">Donanım İnceleme</a> (2)
+</li>
+	<li class="cat-item cat-item-102439080"><a href="https://rizasahan.wordpress.com/category/exchange-2010-2007-2013/">Exchange 2010 – 2007 -2013</a> (9)
+</li>
+	<li class="cat-item cat-item-698590"><a href="https://rizasahan.wordpress.com/category/fortigate/">Fortigate</a> (4)
+</li>
+	<li class="cat-item cat-item-15097435"><a href="https://rizasahan.wordpress.com/category/genel-paylasim/">Genel Paylaşım</a> (11)
+</li>
+	<li class="cat-item cat-item-66855139"><a href="https://rizasahan.wordpress.com/category/genel-paylasim-ipucu/">Genel Paylaşım % İpucu</a> (7)
+</li>
+	<li class="cat-item cat-item-1788077"><a href="https://rizasahan.wordpress.com/category/hp-server/">Hp Server</a> (4)
+</li>
+	<li class="cat-item cat-item-2660314"><a href="https://rizasahan.wordpress.com/category/hyper-v/">Hyper-v</a> (12)
+</li>
+	<li class="cat-item cat-item-102440009"><a href="https://rizasahan.wordpress.com/category/isa-2004-2006-tmg/">Isa 2004 – 2006 – TMG</a> (8)
+</li>
+	<li class="cat-item cat-item-42950340"><a href="https://rizasahan.wordpress.com/category/microsoft-ofis/">Microsoft Ofis</a> (3)
+</li>
+	<li class="cat-item cat-item-6407"><a href="https://rizasahan.wordpress.com/category/sql-server/">Sql Server</a> (13)
+</li>
+	<li class="cat-item cat-item-241134"><a href="https://rizasahan.wordpress.com/category/system-center/">System Center</a> (11)
+</li>
+	<li class="cat-item cat-item-1"><a href="https://rizasahan.wordpress.com/category/uncategorized/">Uncategorized</a> (9)
+</li>
+	<li class="cat-item cat-item-38600"><a href="https://rizasahan.wordpress.com/category/vmware/">Vmware</a> (12)
+</li>
+	<li class="cat-item cat-item-65726"><a href="https://rizasahan.wordpress.com/category/webcast/">Webcast</a> (1)
+</li>
+	<li class="cat-item cat-item-729864"><a href="https://rizasahan.wordpress.com/category/windows-7/">Windows 7</a> (10)
+</li>
+	<li class="cat-item cat-item-4502980"><a href="https://rizasahan.wordpress.com/category/windows-8/">Windows 8</a> (8)
+</li>
+	<li class="cat-item cat-item-12794846"><a href="https://rizasahan.wordpress.com/category/windows-azure/">Windows Azure</a> (4)
+</li>
+	<li class="cat-item cat-item-51457"><a href="https://rizasahan.wordpress.com/category/windows-server-2003/">Windows Server 2003</a> (12)
+</li>
+	<li class="cat-item cat-item-30743506"><a href="https://rizasahan.wordpress.com/category/windows-server-2012/">Windows Server 2012</a> (32)
+</li>
+	<li class="cat-item cat-item-323608972"><a href="https://rizasahan.wordpress.com/category/windows-server-2016/">Windows Server 2016</a> (20)
+</li>
+	<li class="cat-item cat-item-162430569"><a href="https://rizasahan.wordpress.com/category/windows10/">Windows10</a> (23)
+</li>
+		</ul>
+</aside><aside id="calendar-2" class="widget widget_calendar"><div id="calendar_wrap" class="calendar_wrap"><table id="wp-calendar">
+	<caption>Mayıs 2013</caption>
+	<thead>
+	<tr>
+		<th scope="col" title="Pazartesi">P</th>
+		<th scope="col" title="Salı">S</th>
+		<th scope="col" title="Çarşamba">Ç</th>
+		<th scope="col" title="Perşembe">P</th>
+		<th scope="col" title="Cuma">C</th>
+		<th scope="col" title="Cumartesi">C</th>
+		<th scope="col" title="Pazar">P</th>
+	</tr>
+	</thead>
+
+	<tfoot>
+	<tr>
+		<td colspan="3" id="prev"><a href="https://rizasahan.wordpress.com/2013/04/">« Nis</a></td>
+		<td class="pad">&nbsp;</td>
+		<td colspan="3" id="next"><a href="https://rizasahan.wordpress.com/2013/06/">Haz »</a></td>
+	</tr>
+	</tfoot>
+
+	<tbody>
+	<tr>
+		<td colspan="2" class="pad">&nbsp;</td><td>1</td><td>2</td><td><a href="https://rizasahan.wordpress.com/2013/05/03/" aria-label="Yazılar 3 May 2013 tarihinde yayımlandı">3</a></td><td>4</td><td>5</td>
+	</tr>
+	<tr>
+		<td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+	</tr>
+	<tr>
+		<td>13</td><td>14</td><td>15</td><td>16</td><td><a href="https://rizasahan.wordpress.com/2013/05/17/" aria-label="Yazılar 17 May 2013 tarihinde yayımlandı">17</a></td><td>18</td><td>19</td>
+	</tr>
+	<tr>
+		<td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+	</tr>
+	<tr>
+		<td>27</td><td>28</td><td>29</td><td>30</td><td><a href="https://rizasahan.wordpress.com/2013/05/31/" aria-label="Yazılar 31 May 2013 tarihinde yayımlandı">31</a></td>
+		<td class="pad" colspan="2">&nbsp;</td>
+	</tr>
+	</tbody>
+	</table></div></aside>		<aside id="recent-posts-2" class="widget widget_recent_entries">		<h1 class="widget-title">Son Yazılar</h1>		<ul>
+											<li>
+					<a href="https://rizasahan.wordpress.com/2018/07/12/ofis-365-iki-faktorlu-kimlik-dogrulamasi-two-factor-authentication/">Ofis 365 İki Faktörlü Kimlik Doğrulaması (Two Factor&nbsp;Authentication)</a>
+									</li>
+											<li>
+					<a href="https://rizasahan.wordpress.com/2018/07/04/sql-server-management-studio-vulnerability-assessment/">SQL SERVER MANAGEMENT STUDIO VULNERABILITY&nbsp;ASSESSMENT</a>
+									</li>
+											<li>
+					<a href="https://rizasahan.wordpress.com/2018/06/12/windows-server-2016-power-shell-web-access/">Windows Server 2016 Power Shell Web&nbsp;Access</a>
+									</li>
+											<li>
+					<a href="https://rizasahan.wordpress.com/2018/04/28/fortigate-firewall-uzerinde-mobil-token-kullanarak-ikili-kimlik-dogrulmasi/">Fortigate Firewall Üzerinde Mobil Token Kullanarak İkili Kimlik&nbsp;Doğrulması</a>
+									</li>
+											<li>
+					<a href="https://rizasahan.wordpress.com/2018/03/24/windows-server-2019-preview-kurulumu/">Windows Server 2019 Preview&nbsp;Kurulumu</a>
+									</li>
+					</ul>
+		</aside><aside id="linkcat-1356" class="widget widget_links"><h1 class="widget-title">Blogroll</h1>
+	<ul class="xoxo blogroll">
+<li><a href="http://www.adilerbil.com/">Adil ERBİL</a></li>
+<li><a href="http://www.alperyzgn.wordpress.com/">Alper YAZGAN</a></li>
+<li><a href="http://burakistanbullu.wordpress.com/">Burak İSTANBULLU</a></li>
+<li><a href="http://www.bugrakeskin.com/">Buğra KESKİN</a></li>
+<li><a href="http://www.erdemcilingiroglu.com/">Erdem ÇİLİNGİROĞLU</a></li>
+<li><a href="http://www.fakaonline.com/">Fatih KARAALİOĞLU</a></li>
+<li><a href="http://www.hakanuzuner.com/">Hakan UZUNER</a></li>
+<li><a href="http://www.huseyinkartal.net/">Hüseyin KARTAL</a></li>
+<li><a href="http://windowsyazilari.blogspot.com/">M.Hakan CAN</a></li>
+<li><a href="http://www.mumincicek.com/">Mümin ÇİÇEK</a></li>
+<li><a href="http://mesutaladag.com/">Mesut ALADAĞ</a></li>
+<li><a href="http://serhatakinci.com/">Serhat AKINCI</a></li>
+<li><a href="http://www.ufuktatlidil.com/">Ufuk TATLIDİL</a></li>
+<li><a href="http://www.ugurdemir.net/">Uğur DEMİR</a></li>
+
+	</ul>
+</aside>
+<aside id="archives-2" class="widget widget_archive"><h1 class="widget-title">Arşivler</h1>		<ul>
+			<li><a href="https://rizasahan.wordpress.com/2018/07/">Temmuz 2018</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2018/06/">Haziran 2018</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2018/04/">Nisan 2018</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2018/03/">Mart 2018</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2018/02/">Şubat 2018</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2018/01/">Ocak 2018</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/12/">Aralık 2017</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/11/">Kasım 2017</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/10/">Ekim 2017</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/09/">Eylül 2017</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/08/">Ağustos 2017</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/07/">Temmuz 2017</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/06/">Haziran 2017</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/05/">Mayıs 2017</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/04/">Nisan 2017</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2017/02/">Şubat 2017</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/12/">Aralık 2016</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/11/">Kasım 2016</a>&nbsp;(10)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/10/">Ekim 2016</a>&nbsp;(7)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/09/">Eylül 2016</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/08/">Ağustos 2016</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/07/">Temmuz 2016</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/05/">Mayıs 2016</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/03/">Mart 2016</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/02/">Şubat 2016</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2016/01/">Ocak 2016</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/12/">Aralık 2015</a>&nbsp;(9)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/11/">Kasım 2015</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/10/">Ekim 2015</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/08/">Ağustos 2015</a>&nbsp;(9)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/07/">Temmuz 2015</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/04/">Nisan 2015</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/03/">Mart 2015</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/02/">Şubat 2015</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2015/01/">Ocak 2015</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/12/">Aralık 2014</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/11/">Kasım 2014</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/10/">Ekim 2014</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/09/">Eylül 2014</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/07/">Temmuz 2014</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/04/">Nisan 2014</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/03/">Mart 2014</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/02/">Şubat 2014</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2014/01/">Ocak 2014</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/12/">Aralık 2013</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/10/">Ekim 2013</a>&nbsp;(7)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/09/">Eylül 2013</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/08/">Ağustos 2013</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/07/">Temmuz 2013</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/06/">Haziran 2013</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/05/">Mayıs 2013</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/04/">Nisan 2013</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/03/">Mart 2013</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/02/">Şubat 2013</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2013/01/">Ocak 2013</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/10/">Ekim 2012</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/09/">Eylül 2012</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/08/">Ağustos 2012</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/07/">Temmuz 2012</a>&nbsp;(6)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/06/">Haziran 2012</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/05/">Mayıs 2012</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/04/">Nisan 2012</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2012/03/">Mart 2012</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/12/">Aralık 2011</a>&nbsp;(10)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/11/">Kasım 2011</a>&nbsp;(7)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/10/">Ekim 2011</a>&nbsp;(10)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/09/">Eylül 2011</a>&nbsp;(6)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/08/">Ağustos 2011</a>&nbsp;(1)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/06/">Haziran 2011</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/05/">Mayıs 2011</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/03/">Mart 2011</a>&nbsp;(3)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/02/">Şubat 2011</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2011/01/">Ocak 2011</a>&nbsp;(2)</li>
+	<li><a href="https://rizasahan.wordpress.com/2010/12/">Aralık 2010</a>&nbsp;(5)</li>
+	<li><a href="https://rizasahan.wordpress.com/2010/11/">Kasım 2010</a>&nbsp;(4)</li>
+	<li><a href="https://rizasahan.wordpress.com/2010/10/">Ekim 2010</a>&nbsp;(10)</li>
+	<li><a href="https://rizasahan.wordpress.com/2010/09/">Eylül 2010</a>&nbsp;(23)</li>
+		</ul>
+		</aside><aside id="search-3" class="widget widget_search"><h1 class="widget-title">Site İçi Arama</h1><form role="search" method="get" class="search-form" action="https://rizasahan.wordpress.com/">
+	<label>
+		<span class="screen-reader-text">Arama:</span>
+		<input class="search-field" placeholder="Ara …" name="s" type="search">
+	</label>
+	<input class="search-submit" value="Ara" type="submit">
+</form>
+</aside><aside id="top-posts-2" class="widget widget_top-posts"><h1 class="widget-title">Popüler Yazılar</h1><ul>				<li>
+										<a href="https://rizasahan.wordpress.com/2013/02/02/sistem-odasi-kurulumu-ve-network-dizaynina-dair-saha-gozlemlerim/" class="bump-view" data-bump-view="tp">
+						Sistem Odası Kurulumu ve Network Dizaynına Dair Saha Gözlemlerim					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/" class="bump-view" data-bump-view="tp">
+						SQL SERVER 2012 Sql Authentication ile Oturum Açılması					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2016/01/10/windows-10-bitlocker-ozelligini-devreye-almak/" class="bump-view" data-bump-view="tp">
+						Windows 10 Bitlocker Özelliğini Devreye Almak					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2015/03/25/server-2012-r2-smtp-yapilandirmasi/" class="bump-view" data-bump-view="tp">
+						Server 2012 R2 SMTP Yapılandırması					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2016/01/20/psexec-nedir-nasil-kullanilir/" class="bump-view" data-bump-view="tp">
+						PsExec Nedir? Nasıl Kullanılır?					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2012/08/29/windows-server-2012-remote-access-nat-islemi/" class="bump-view" data-bump-view="tp">
+						Windows Server 2012  Remote Access NAT işlemi					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2016/05/17/kb3159706-wsus-yonetim-konsolu-erisim-hatasi/" class="bump-view" data-bump-view="tp">
+						KB3159706 Wsus Yönetim Konsolu Erişim Hatası					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2013/04/17/sql-server-2012-firewall-ve-genel-baglanti-ayarlari/" class="bump-view" data-bump-view="tp">
+						SQL Server 2012 Firewall ve Genel Bağlantı Ayarları					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2013/08/29/ofis-365-exchange-kural-yonetimi/" class="bump-view" data-bump-view="tp">
+						Ofis 365 Exchange Kural Yönetimi					</a>
+									</li>
+							<li>
+										<a href="https://rizasahan.wordpress.com/2013/12/19/ofis-365-uzerinde-paylasilan-posta-kutusu-olusturmak/" class="bump-view" data-bump-view="tp">
+						Ofis 365 Üzerinde Paylaşılan Posta Kutusu Oluşturmak					</a>
+									</li>
+			</ul></aside>	</div><!-- #secondary -->
+
+	</div><!-- #content -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+		<div class="site-info">
+						<a href="https://wordpress.com/?ref=footer_website">WordPress.com'da ücretsiz bir web sitesi ya da blog oluşturun.</a>
+			
+					</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+</div><!-- #page -->
+
+<!--  -->
+<script type="text/javascript" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/gprofiles.js"></script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/wpgroho.js"></script>
+
+	<script>
+		//initialize and attach hovercards to all gravatars
+		jQuery( document ).ready( function( $ ) {
+
+			if (typeof Gravatar === "undefined"){
+				return;
+			}
+
+			if ( typeof Gravatar.init !== "function" ) {
+				return;
+			}			
+
+			Gravatar.profile_cb = function( hash, id ) {
+				WPGroHo.syncProfileData( hash, id );
+			};
+			Gravatar.my_hash = WPGroHo.my_hash;
+			Gravatar.init( 'body', '#wp-admin-bar-my-account' );
+		});
+	</script>
+
+		<div style="display:none">
+	<div class="grofile-hash-map-9e76ef8201a74d6ff4bd176a97431648">
+	</div>
+	<div class="grofile-hash-map-6fc88d50b4c8024bb86ed84bf6e8d4f2">
+	</div>
+	<div class="grofile-hash-map-a1e67c4f132122444b93869c3a5bbb3d">
+	</div>
+	<div class="grofile-hash-map-97ea83e20520d85a728f38950fcc1e7f">
+	</div>
+	<div class="grofile-hash-map-504f2946c7530bff086661b7db5d07f0">
+	</div>
+	<div class="grofile-hash-map-d637f770b63fd185c4326fe1435b6693">
+	</div>
+	<div class="grofile-hash-map-53945a8903e2d7df3db304a6c963375a">
+	</div>
+	<div class="grofile-hash-map-7eaf67cf0435623eca30d99665def4cf">
+	</div>
+	<div class="grofile-hash-map-6d42f82a230bb6be48141c207f3a2f2d">
+	</div>
+	<div class="grofile-hash-map-55ac728a11d6a178359da28e61659b55">
+	</div>
+	</div>
+<script type="text/javascript">
+/* <![CDATA[ */
+var HighlanderComments = {"loggingInText":"Giri\u015f Yap\u0131l\u0131yor\u2026","submittingText":"Yorum Yay\u0131nlan\u0131yor\u2026","postCommentText":"Yorum g\u00f6nder","connectingToText":"Connecting to %s","commentingAsText":"%1$s: %2$s hesab\u0131n\u0131z\u0131 kullanarak yorum yap\u0131yorsunuz.","logoutText":"\u00c7\u0131k\u0131\u015f Yap","loginText":"Giri\u015f","connectURL":"https:\/\/rizasahan.wordpress.com\/public.api\/connect\/?action=request","logoutURL":"https:\/\/rizasahan.wordpress.com\/wp-login.php?action=logout&_wpnonce=159ca7d39c","homeURL":"https:\/\/rizasahan.wordpress.com\/","postID":"4450","gravDefault":"identicon","enterACommentError":"Yorum yaz\u0131n","enterEmailError":"L\u00fctfen e-posta adresinizi buraya girin","invalidEmailError":"Ge\u00e7ersiz e-posta adresi","enterAuthorError":"L\u00fctfen ad\u0131n\u0131z\u0131 buraya girin","gravatarFromEmail":"Bu resim her yorum yapt\u0131\u011f\u0131n\u0131zda g\u00f6r\u00fcnecektir. \u00d6zelle\u015ftirmek i\u00e7in t\u0131klay\u0131n.","logInToExternalAccount":"Bu hesaplardan birinin bilgilerini kullanmak i\u00e7in giri\u015f yap\u0131n.","change":"De\u011fi\u015ftir","changeAccount":"Hesab\u0131 De\u011fi\u015ftir","comment_registration":"0","userIsLoggedIn":"","isJetpack":"","text_direction":"ltr"};
+/* ]]> */
+</script>
+<script type="text/javascript" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a_003.js"></script>
+
+	<div id="carousel-reblog-box">
+		<form action="#" name="carousel-reblog">
+			<textarea id="carousel-reblog-content" name="carousel-reblog-content" placeholder="Görüşlerinizi buraya ekleyin... (opsiyonel)"></textarea>
+			<label for="carousel-reblog-to-blog-id" id="carousel-reblog-lblogid">Şuraya gönder</label>
+			<select name="carousel-reblog-to-blog-id" id="carousel-reblog-to-blog-id">
+						</select>
+
+			<div class="submit">
+				<span class="canceltext"><a href="#" class="cancel">Vazgeç</a></span>
+				<input name="carousel-reblog-submit" class="button" id="carousel-reblog-submit" value="Yazıyı Yeniden Blogla" type="submit">
+				<input id="carousel-reblog-blog-id" value="15984143" type="hidden">
+				<input id="carousel-reblog-blog-url" value="https://rizasahan.wordpress.com" type="hidden">
+				<input id="carousel-reblog-blog-title" value="Rıza ŞAHAN" type="hidden">
+				<input id="carousel-reblog-post-url" value="" type="hidden">
+				<input id="carousel-reblog-post-title" value="" type="hidden">
+			</div>
+
+			<input id="_wpnonce" name="_wpnonce" value="32bed61062" type="hidden"><input name="_wp_http_referer" value="/2013/05/17/sql-server-2012-sql-authentication-ile-oturum-acilmasi/" type="hidden">		</form>
+
+		<div class="arrow"></div>
+	</div>
+<link rel="stylesheet" id="all-css-0-3" href="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/jetpack-carousel.css" type="text/css" media="all">
+<!--[if lte IE 8]>
+<link rel='stylesheet' id='jetpack-carousel-ie8fix-css'  href='https://s1.wp.com/wp-content/mu-plugins/carousel/jetpack-carousel-ie8fix.css?m=1412618825h&#038;ver=20121024' type='text/css' media='all' />
+<![endif]-->
+<script type="text/javascript">
+/* <![CDATA[ */
+var actionbardata = {"siteID":"15984143","siteName":"R\u0131za \u015eAHAN","siteURL":"http:\/\/rizasahan.wordpress.com","icon":"<img alt='' src='https:\/\/s2.wp.com\/i\/logo\/wpcom-gray-white.png' class='avatar avatar-50' height='50' width='50' \/>","canManageOptions":"","canCustomizeSite":"","isFollowing":"","themeSlug":"pub\/sorbet","signupURL":"https:\/\/wordpress.com\/start\/","loginURL":"https:\/\/rizasahan.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F","themeURL":"","xhrURL":"https:\/\/rizasahan.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"8d8d8dc801","isSingular":"1","isFolded":"","isLoggedIn":"","isMobile":"","subscribeNonce":"<input type=\"hidden\" id=\"_wpnonce\" name=\"_wpnonce\" value=\"35265343dd\" \/>","referer":"https:\/\/rizasahan.wordpress.com\/2013\/05\/17\/sql-server-2012-sql-authentication-ile-oturum-acilmasi\/","canFollow":"1","feedID":"4278250","statusMessage":"","customizeLink":"https:\/\/rizasahan.wordpress.com\/wp-admin\/customize.php?url=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F","postID":"4450","shortlink":"https:\/\/wp.me\/p154cL-19M","canEditPost":"","editLink":"https:\/\/wordpress.com\/post\/rizasahan.wordpress.com\/4450","statsLink":"https:\/\/wordpress.com\/stats\/post\/4450\/rizasahan.wordpress.com","i18n":{"view":"Siteyi g\u00f6r\u00fcnt\u00fcle","follow":"Takip Et","following":"Takip Ediliyor","edit":"D\u00fczenle","login":"Giri\u015f","signup":"Kaydolun","customize":"\u00d6zelle\u015ftir","report":"Bu i\u00e7eri\u011fi rapor et","themeInfo":"Temay\u0131 edin: Sorbet","shortlink":"K\u0131sa adresi kopyala","copied":"Kopyaland\u0131","followedText":"Bu sitedeki yeni yaz\u0131lar art\u0131k size ait <a href=\"https:\/\/wordpress.com\/\">Okuyucu<\/a> i\u00e7inde g\u00f6r\u00fcnecektir","foldBar":"Bu \u015feridi gizle","unfoldBar":"Bu \u015feridi geni\u015flet","editSubs":"Abonelikleri Y\u00f6net","viewReader":"Siteyi Okuyucuda g\u00f6r\u00fcnt\u00fcle","viewReadPost":"View post in Reader","subscribe":"Abone ol","enterEmail":"E-posta adresinizi girin","followers":"Di\u011fer 45 takip\u00e7iye kat\u0131l\u0131n","alreadyUser":"WordPress.com hesab\u0131n\u0131z var m\u0131? <a href=\"https:\/\/rizasahan.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F\">\u015eimdi oturum a\u00e7\u0131n.<\/a>","stats":"\u0130statistikler"}};
+/* ]]> */
+</script>
+<script type="text/javascript">
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"tr","ajaxurl":"https:\/\/rizasahan.wordpress.com\/wp-admin\/admin-ajax.php","nonce":"8b8e5dd78a","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Yorum","post_comment":"Yorum g\u00f6nder","write_comment":"Yorum Yap\u0131n...","loading_comments":"Yorumlar Y\u00fckleniyor...","download_original":"Tam boyutta g\u00f6r <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"L\u00fctfen yorumunuz ile birlikte bir metin g\u00f6nderdi\u011finizden emin olun.","no_comment_email":"L\u00fctfen yorum yapmak i\u00e7in bir eposta adresi girin.","no_comment_author":"L\u00fctfen yorum i\u00e7in ad\u0131n\u0131z\u0131 belirtin.","comment_post_error":"\u00dczg\u00fcn\u00fcz fakat yorumunuz g\u00f6nderilirken bir hata olu\u015ftu. L\u00fctfen daha sonra tekrar deneyin.","comment_approved":"Yorumunuz onayland\u0131.","comment_unapproved":"Yorumunuz denetim i\u00e7in beklemede.","camera":"Kamera","aperture":"A\u00e7\u0131kl\u0131k","shutter_speed":"Deklan\u015f\u00f6r H\u0131z\u0131","focal_length":"Odak Uzunlu\u011fu","copyright":"Eser Sahibinin Haklar\u0131","comment_registration":"0","require_name_email":"1","login_url":"https:\/\/rizasahan.wordpress.com\/wp-login.php?redirect_to=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F","blog_id":"15984143","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">E-posta (Gerekli)<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">\u0130sim (Gerekli)<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">\u0130nternet sitesi<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>","reblog":"Tekrar blogla","reblogged":"Tekrar blogland\u0131","reblog_add_thoughts":"G\u00f6r\u00fc\u015flerinizi buraya ekleyin... (opsiyonel)","reblogging":"Tekrar bloglan\u0131yor...","post_reblog":"Tekrar Blog Yay\u0131mla","stats_query_args":"blog=15984143&v=wpcom&tz=0&user_id=0&subd=rizasahan","is_public":"1","reblog_enabled":""};
+/* ]]> */
+</script>
+<script type="text/javascript" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/a.js"></script><div class="widget widget_eu_cookie_law_widget" style="display: block;"><div class="hide-on-button ads-active" data-hide-timeout="30" data-consent-expiration="180" id="eu-cookie-law">
+	<form method="post">
+		<input value="Kapat ve kabul et" class="accept" type="submit">
+
+		Gizlilik ve Çerezler: Bu sitede çerez kullanılmaktadır. Bu web 
+sitesini kullanmaya devam ederek bunların kullanımını kabul edersiniz. <br>
+Çerezlerin nasıl kontrol edileceği dahil, daha fazla bilgi edinmek için buraya bakın:
+		<a href="https://automattic.com/cookies">
+			Çerez Politikası		</a>
+ </form>
+</div>
+</div><div id="actionbar" class="actnbr-pub-sorbet actnbr-has-follow"><ul><li class="actnbr-btn actnbr-hidden"> 			    	<a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Takip Et</span></a> 			    	<div class="actnbr-popover tip tip-top-left actnbr-notice"> 			    		<div class="tip-arrow"></div> 			    		<div class="tip-inner actnbr-follow-bubble"></div> 			    	</div> 			    </li><li class="actnbr-ellipsis actnbr-hidden"> 			  <svg class="gridicon gridicon__ellipsis" height="24" width="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><circle cx="5" cy="12" r="2"></circle><circle cx="19" cy="12" r="2"></circle><circle cx="12" cy="12" r="2"></circle></g></svg> 			  <div class="actnbr-popover tip tip-top-left actnbr-more"> 			  	<div class="tip-arrow"></div> 			  	<div class="tip-inner"> 				  <ul> 				    <li class="actnbr-sitename actnbr-hidden"><a href="http://rizasahan.wordpress.com/"><img alt="" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/wpcom-gray-white.png" class="avatar avatar-50" width="50" height="50"> Rıza ŞAHAN</a></li> 				   	<li class="actnbr-folded-customize actnbr-hidden"><a href="https://rizasahan.wordpress.com/wp-admin/customize.php?url=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F"><svg class="gridicon gridicon__customize" height="20px" width="20px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M2 6c0-1.505.78-3.08 2-4 0 .845.69 2 2 2 1.657 0 3 1.343 3 3 0 .386-.08.752-.212 1.09.74.594 1.476 1.19 2.19 1.81L8.9 11.98c-.62-.716-1.214-1.454-1.807-2.192C6.753 9.92 6.387 10 6 10c-2.21 0-4-1.79-4-4zm12.152 6.848l1.34-1.34c.607.304 1.283.492 2.008.492 2.485 0 4.5-2.015 4.5-4.5 0-.725-.188-1.4-.493-2.007L18 9l-2-2 3.507-3.507C18.9 3.188 18.225 3 17.5 3 15.015 3 13 5.015 13 7.5c0 .725.188 1.4.493 2.007L3 20l2 2 6.848-6.848c1.885 1.928 3.874 3.753 5.977 5.45l1.425 1.148 1.5-1.5-1.15-1.425c-1.695-2.103-3.52-4.092-5.448-5.977z" data-reactid=".2.1.1:0.1b.0"></path></g></svg><span>Özelleştir<span></span></span></a></li> 				    <li class="actnbr-folded-follow actnbr-hidden"><a class="actnbr-action actnbr-actn-follow" href=""><svg class="gridicon gridicon__follow" height="24px" width="24px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g><path d="M23 16v2h-3v3h-2v-3h-3v-2h3v-3h2v3h3zM20 2v9h-4v3h-3v4H4c-1.1 0-2-.9-2-2V2h18zM8 13v-1H4v1h4zm3-3H4v1h7v-1zm0-2H4v1h7V8zm7-4H4v2h14V4z"></path></g></svg><span>Takip Et</span></a></li> 					<li class="actnbr-signup actnbr-hidden"><a href="https://wordpress.com/start/">Kaydolun</a></li> 				    <li class="actnbr-login actnbr-hidden"><a href="https://rizasahan.wordpress.com/wp-login.php?redirect_to=https%3A%2F%2Frizasahan.wordpress.com%2F2013%2F05%2F17%2Fsql-server-2012-sql-authentication-ile-oturum-acilmasi%2F">Giriş</a></li> 				     				    <li class="actnbr-shortlink actnbr-hidden"><a href="https://wp.me/p154cL-19M">Kısa adresi kopyala</a></li> 				    <li class="flb-report actnbr-hidden"><a href="http://en.wordpress.com/abuse/">Bu içeriği rapor et</a></li> 				     				     				    <li class="actnbr-subs actnbr-hidden"><a href="https://subscribe.wordpress.com/">Abonelikleri Yönet</a></li> 				    <li class="actnbr-fold actnbr-hidden"><a href="">Bu şeridi gizle</a></li> 			      </ul> 			    </div> 		      </div> 		    </li> 	      </ul></div>
+<script type="text/javascript">
+// <![CDATA[
+(function() {
+try{
+  if ( window.external &&'msIsSiteMode' in window.external) {
+    if (window.external.msIsSiteMode()) {
+      var jl = document.createElement('script');
+      jl.type='text/javascript';
+      jl.async=true;
+      jl.src='/wp-content/plugins/ie-sitemode/custom-jumplist.php';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(jl, s);
+    }
+  }
+}catch(e){}
+})();
+// ]]>
+</script>	<script type="text/javascript">
+	var skimlinks_pub_id = "725X584219"
+	var skimlinks_sitename = "rizasahan.wordpress.com";
+	</script>
+	<script type="text/javascript" defer="defer" src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/725X1342.js"></script>		<iframe src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/master.html" scrolling="no" id="likes-master" name="likes-master" style="display:none;"></iframe>
+		<div id="likes-other-gravatars"><div class="likes-text"><span>%d</span> blogcu bunu beğendi:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+<script src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/w.js" type="text/javascript" async="" defer="defer"></script>
+<script type="text/javascript">
+_tkq = window._tkq || [];
+_stq = window._stq || [];
+_tkq.push(['storeContext', {'blog_id':'15984143','blog_tz':'0','user_lang':'tr','blog_lang':'tr','user_id':'0'}]);
+_stq.push(['view', {'blog':'15984143','v':'wpcom','tz':'0','user_id':'0','post':'4450','subd':'rizasahan'}]);
+_stq.push(['extra', {'crypt':'UE40eW5QN0p8M2Y/RE1wamRFTUJvcCVmdVtvcCUrditEcC5rdHw4JUQsQU4vR3dMJT82VTRnczRMU105WE5qZWtoXWczU3FUeU5sTDUtcjR+LWclem9EfjE9MFhEQU9RRzFBQWEtaGhCcS0rJjYyb0cwP0IlVGImWVUuU2lPMD1oMlR6Vz18WFdfP2F3TS9MP0JoWiwtW1dnampaLGpIZ1BXdm4yeDFdOTFrXU50dmZZQ2xaV1VGZytaY0cycy1ITUsvQkMvdDF0QmFdalN2UWhqUS9zZGlUcl9MV1p5SkNfdjEwbDUmcXU5cn5LQlpRS1BlSXc0eTBTP1E5eFByXVoleFU5S01KJTNLbVRmR0hkfF1RXV98X09Bc34zUXBmWHMwMHVyPzB3VSZpcVZvWS0='}]);
+_stq.push([ 'clickTrackerInit', '15984143', '4450' ]);
+	</script>
+<noscript><img src="https://pixel.wp.com/b.gif?v=noscript" style="height:0px;width:0px;overflow:hidden" alt="" /></noscript>
+<script>
+if ( 'object' === typeof wpcom_mobile_user_agent_info ) {
+
+	wpcom_mobile_user_agent_info.init();
+	var mobileStatsQueryString = "";
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedPlatformName )
+		mobileStatsQueryString += "&x_" + 'mobile_platforms' + '=' + wpcom_mobile_user_agent_info.matchedPlatformName;
+	
+	if( false !== wpcom_mobile_user_agent_info.matchedUserAgentName )
+		mobileStatsQueryString += "&x_" + 'mobile_devices' + '=' + wpcom_mobile_user_agent_info.matchedUserAgentName;
+	
+	if( wpcom_mobile_user_agent_info.isIPad() )
+		mobileStatsQueryString += "&x_" + 'ipad_views' + '=' + 'views';
+
+	if( "" != mobileStatsQueryString ) {
+		new Image().src = document.location.protocol + '//pixel.wp.com/g.gif?v=wpcom-no-pv' + mobileStatsQueryString + '&baba=' + Math.random();
+	}
+	
+}
+</script>
+
+<img src="SQL%20SERVER%202012%20Sql%20Authentication%20ile%20Oturum%20A%C3%A7%C4%B1lmas%C4%B1%20%E2%80%93%20R%C4%B1za%20%C5%9EAHAN_dosyalar/g.gif" alt=":)" id="wpstats"></body></html>

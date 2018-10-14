@@ -1,0 +1,13 @@
+React Native get started tutorialý yapýldý;
+
+Node js kuruldu
+
+Telefona Expo client kuruldu..
+
+ //Expo da share kýsmýndan QR taratýnca çalýþtý..
+
+
+Pc ye chocolatey kuruldu
+
+choco ile python 2 ve JDK 8 kuruldu..
+

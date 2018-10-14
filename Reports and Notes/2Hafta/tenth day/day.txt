@@ -1,0 +1,15 @@
+
+
+
+Grid e devam edildi..
+
+Grid listesinden seçilen item'ýn delete butonu ile silinmesi saðlandý.
+Listeden seçilen satýra 2 kere týklayarak editleme kýsmýnýn gelmesi ve deðiþiklik yapýp save butonuna basýnca kaydetmesi saðlandý..
+Update için servera PUT request gönderildi..
+Delete için DELETE request gönderildi..
+Eleman eklemek için POST
+
+Görünümde düzenlemeler yapýldý.. sade ve effective bir görünüm oluþturuldu..
+
+
+

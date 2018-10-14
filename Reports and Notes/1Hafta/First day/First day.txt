@@ -1,0 +1,18 @@
+
+This tutorial is followed.
+
+http://www.vogella.com/tutorials/EclipseWTP/article.html#installation-and-configuration-of-eclipse-wtp
+
+In this tutorial,
+
+I installed Eclipse and Apache Tomcat(webserver).
+
+Then,I have created a servlet which works as a webpage counter. It tracks the number of visitors of the webpage and persists the number in a text file.
+
+Then,I ran that project on this page http://localhost:8080/com.vogella.web.filecounter/FileCounter
+
+and output is This site has been accessed 1 times.
+	      This site has been accessed 2 times.
+
+The servlet will return the number of times it was accessed. If you wait 5 seconds and refresh the browser, the number should increase.
+

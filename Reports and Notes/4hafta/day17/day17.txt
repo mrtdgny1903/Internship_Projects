@@ -1,0 +1,11 @@
+
+React docs okundu..
+
+Redux getting started a baþlandý..
+
+Enforcing that every change is described as an action lets us have a clear understanding of what’s going on in the app.
+If something changed, we know why it changed. Actions are like breadcrumbs of what has happened. Finally, to tie state and actions together,
+we write a function called a reducer.
+
+
+State ve action larý baðlamak için reduce adýnda bir fonksiyon kullanýlýyor.

@@ -1,0 +1,3 @@
+sqlite3 kullanarak var olan modellerden tablolar oluþturulmasý hedeflendi..
+
+fakat loopback in automigrate autoupdate özellikleri sqlite için desteklenmediðinden baþka bir framework araþtýrýlmaya baþlandý..

@@ -1,0 +1,25 @@
+SENCHA
+
+https://docs.sencha.com/extjs/6.0.2/guides/getting_started/getting_started.html
+
+Dunku tutorial yapildi sencha kuruldu (Dil problemi yasandi os i ingilzce yapinca duzeldi)
+
+App Olusturma
+
+sencha -sdk C:\Users\Murat\Desktop\ext-6.6.0-trial\ext-6.6.0 generate app Sportcial C:\Users\Murat\Desktop\Sportcial
+
+
+
+
+Command Line a gir.
+MyApp e git
+sencha app watch
+
+http://localhost:1841
+
+
+
+extjs form
+
+
+Sencha Architect kullanilarak Form olusturuldu.

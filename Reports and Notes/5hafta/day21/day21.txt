@@ -1,0 +1,3 @@
+Önceden mssql ve loopback kullanýlarak çekilen tablolar ve attributeler kullanýlarak verilerininde çekilmesi amaçlandý ve araþtýrýldý..(SQLite ile)
+
+node ile SQLite kuruldu (npm install sqlite3)

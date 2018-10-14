@@ -1,0 +1,169 @@
+Placing scripts at the bottom of the <body> element improves the display speed, because script compilation slows down the display.
+
+
+
+//Dýþarýdan çaðýrmak
+
+External JavaScript Advantages
+
+Placing scripts in external files has some advantages:
+
+    It separates HTML and code
+    It makes HTML and JavaScript easier to read and maintain
+    Cached JavaScript files can speed up page loads
+
+
+To add several script files to one page  - use several script tags:
+
+<script src="myScript.js"></script>
+
+This example uses a full URL to link to a script: 
+<script src="https://www.w3schools.com/js/myScript1.js"></script> 
+
+This example uses a script located in a specified folder on the current web site:
+ <script src="/js/myScript1.js"></script> 
+
+This example links to a script located in the same folder as the current page:
+ <script src="myScript1.js"></script> 
+
+/////////////////////////////////////JavaScript Display Possibilities/////////////////////////////////////////////////////
+
+JavaScript can "display" data in different ways:
+
+    Writing into an HTML element, using innerHTML.
+    Writing into the HTML output using document.write().        ***********The document.write() method should only be used for testing.      
+
+
+                                                                     
+    Writing into an alert box, using window.alert().            ***********<script>window.alert(5 + 6);</script>                                                     
+    Writing into the browser console, using console.log().
+
+
+
+
+
+///////////////////////////////////////////////////////String Methods//////////////////////////////////////////////////////////
+
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate");                                  // IndexOf kelimenin baþladýðý ilk index numarasýný döndürür.
+
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.lastIndexOf("locate");                              //lastIndexOf kelimeden birkaç tane varsa sonuncusunun baþladýðý index numarasýný döndürür.
+                                                                  //Her iki özellikte'de kelime yoksa -1 döndürür.
+
+
+
+var str = "Please locate where 'locate' occurs!";
+var pos = str.indexOf("locate",15);                               //2.Parametre search ýn baþlangýç noktasýný belirtir.15.indexten sonra aramaya baþlar 16,17 diye devam eder kelimeyi bulduðu ilk indexi alýr.
+
+
+
+var str = "Please locate where 'locate' occurs!";                 // IndexOf ile ayný çýktýyý verir ama ayný þekilde çalýþmaz.Farklýlýklar;
+var pos = str.search("locate");
+
+
+    									The search() method cannot take a second start position argument.
+    									The indexOf() method cannot take powerful search values (regular expressions).
+
+
+
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(7, 13);                                       // slice() 7.indexten baþayýp(7 dahil) 13(dahil degil) e kadar alýp yeni bir string e yazdýrýr.
+
+
+
+var str = "Apple, Banana, Kiwi";
+var res = str.slice(-12, -6);                                     //Negatif degerler ifadenin sonundan baþa dogru sayar..
+
+                                                                   
+
+ var res = str.slice(7);                                          //2.parametre verilmez ise 7 den baþlayýp sonuna kadar alýr.
+
+
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substring(7, 13);                                   // substring in digerlerinden tek farký negatif parametre almaz!
+
+
+
+
+var str = "Apple, Banana, Kiwi";
+var res = str.substr(7, 6);                                       // substr nin farký ise 2.parametre adým sayýsý belirtir..!
+
+
+
+str = "Please visit Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");                    // replace() Ýlk parametreyi ilk bulduðu yerde 2.parametreyle deðiþtirir.
+
+
+
+str = "Please visit Microsoft and Microsoft!";
+var n = str.replace("Microsoft", "W3Schools");                    // replace() Eðer ayný kelimeden 2 tane varsa ilk bulduðunu deðiþtirir.
+
+
+str = "Please visit Microsoft!";
+var n = str.replace("MICROSOFT", "W3Schools");                    // replace() Default olarak büyük küçük harfe duyarlýdýr bu þekilde yazým çalýþmaz..
+
+
+
+str = "Please visit Microsoft!";
+var n = str.replace(/MICROSOFT/i, "W3Schools");                   // Regular expression kullanarak duyarsýz hale getirebiliriz /i insensitive anlamýndadýr.Yazýmýnda týrnak kullanýlmaz.
+
+
+
+str = "Please visit Microsoft and Microsoft!";
+var n = str.replace(/Microsoft/g, "W3Schools");                   //              /g global match her bulduðu kelimeye uygular.
+
+
+
+
+var text1 = "Hello World!";       // String
+var text2 = text1.toUpperCase();  // text2 is text1 converted to upper        // toUpperCase();  text1 i büyük harflerle yazdýrýr.
+
+
+
+
+var text1 = "Hello World!";       // String
+var text2 = text1.toLowerCase();  // text2 is text1 converted to lower        // toLowerCase();  text1 i küçük harflerle yazdýrýr.
+
+
+
+
+var str = "       Hello World!        ";
+alert(str.trim());                                                            // trim() whitespace leri siler..
+
+
+
+var str = "HELLO WORLD";
+str.charAt(0);            // returns H                                // charAt()  index deðeri verilen karakteri döndürür.
+
+
+ var txt = "a,b,c,d,e";   // String
+txt.split(",");          // Split on commas
+txt.split(" ");          // Split on spaces
+txt.split("|");          // Split on pipe                            // virgule gore ayýr, boþluða göre ayýr, pipe a göre ayýr..
+								     // Eðer ayraç koyulmazsa tüm stringi 0.indexe koyar..
+
+
+ var txt = "Hello";       // String
+txt.split("");           // Split in characters 		     // "" bir satýra bir harf yazar (Dikey yazar)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

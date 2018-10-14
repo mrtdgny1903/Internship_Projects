@@ -1,0 +1,1 @@
+typeorm kullanarak 2 tane connection oluşturuldu ve mssql de bir databaseden başka database 1 tablo verileriyle aktarıldı..

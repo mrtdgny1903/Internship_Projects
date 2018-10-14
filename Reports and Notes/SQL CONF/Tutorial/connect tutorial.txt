@@ -1,0 +1,20 @@
+https://loopback.io/doc/en/lb3/Connecting-to-Microsoft-SQL-Server.html#6-create-the-collection-with-sample-data---automigration
+
+
+Tutorialýn aynýsýný yap
+
+bin klasörünü loopback-example ýn içine koy.
+
+serverýn içindeki datasources.json ý conf et.
+
+{
+  "accountDS": {
+    "host": "localhost",
+    "port": 1433,
+    "database": "demo",
+    "username": "sa",
+    "password": "Davon2012",
+    "name": "accountDS",
+    "connector": "mssql"
+  }
+}

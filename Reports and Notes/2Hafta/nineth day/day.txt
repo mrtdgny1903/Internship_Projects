@@ -1,0 +1,2 @@
+Form'a Delete All,Update Selected,Delete Selected buttonlarý eklendi.
+Gridden seçilen rowda deðiþiklik yapýlmasý ve silinmesi için çalýþýldý..

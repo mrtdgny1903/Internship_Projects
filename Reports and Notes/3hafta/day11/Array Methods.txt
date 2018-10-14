@@ -1,0 +1,116 @@
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.toString();            // toString();
+
+											 Banana,Orange,Apple,Mango
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits.join(" * ");           // join();
+											 Banana * Orange * Apple * Mango
+
+
+
+
+ var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.pop();              					// Removes the last element ("Mango") from fruits 
+
+
+
+ var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var x = fruits.pop();      					// the value of x is "Mango" 
+
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi");       					//  Adds a new element ("Kiwi") to fruits 
+
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+var x = fruits.push("Kiwi");   					//  the value of x is 5  //The push() method returns the new array length:
+
+
+
+
+ var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits[fruits.length] = "Kiwi";          			// Appends "Kiwi" to fruit     // length herzaman indexten 1 fazla olacaðý için devamlý yeni value ekler.
+
+
+
+ var fruits = ["Banana", "Orange", "Apple", "Mango"];
+delete fruits[0];           					// delete(); Changes the first element in fruits to undefined 
+
+
+
+Using delete may leave undefined holes in the array. Use pop() or shift() instead.
+
+
+
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");                          // splice() method.  Ilk parametre baþlangýç indexi, 2.parametre kaç elemanýn silineceði, 3.parametre ise eklenecek olanlar.
+
+
+
+
+ var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);        					// Removes the first element of fruits  //The rest of the parameters are omitted. No new elements will be added.
+
+
+
+Merging (Concatenating) Arrays
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

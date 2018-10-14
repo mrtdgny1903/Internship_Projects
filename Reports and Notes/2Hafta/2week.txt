@@ -1,0 +1,43 @@
+Sencha Architect üzerinde çalýþýldý..
+
+Oluþturulan formda butonlara onlick eventleri eklendi
+
+Submit ve Get All olmak üzere 2 buton tanýmlandý
+
+Submit e basýldýgýnda post ile önceki tutorialda yapýlan rest api serverýna form verilerini yollayacak þekilde configure edildi.
+
+Get All a basýldýgýnda ise get le serverdaki datalarý çekecek þekilde configure edildi.
+
+
+
+----------->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  SORUNLAR KISMINA YAZ        Farklý domainler arasý veri yollamaya çalýþýrken CORS hatasý ile karþýlaþýldý ve araþtýrýlýp çözüldü..
+
+
+
+
+Projeye Grid eklendi
+
+Serverdan gelen ve POST ve GET yapýlan verileri Grid de liste þeklinde gösterilmesi saðlandý.
+
+
+
+Yarým gün çalýþýldý..
+
+Grid ile ilgili bilgi toplandý..
+
+
+
+Form'a Delete All,Update Selected,Delete Selected buttonlarý eklendi.
+Gridden seçilen rowda deðiþiklik yapýlmasý ve silinmesi için çalýþýldý..
+Grid e devam edildi..
+
+Grid listesinden seçilen item'ýn delete butonu ile silinmesi saðlandý.
+Listeden seçilen satýra 2 kere týklayarak editleme kýsmýnýn gelmesi ve deðiþiklik yapýp save butonuna basýnca kaydetmesi saðlandý..
+Update için servera PUT request gönderildi..
+Delete için DELETE request gönderildi..
+Eleman eklemek için POST
+
+Görünümde düzenlemeler yapýldý.. sade ve effective bir görünüm oluþturuldu..
+
+
+

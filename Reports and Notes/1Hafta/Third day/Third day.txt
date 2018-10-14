@@ -1,0 +1,24 @@
+Bir önceki projede 
+
+1) Chrome'a POSTMAN extension kurulacak. 
+2) POSTMAN kullanrak bir önceki tutorialda http://localhost:8080/employee URL si çaðrýlarak sonuçlarý POSTMAN da görünecek.
+
+3) EmployeeController sýnýfýna yeni bir method ekleyerek POST tipinde HTTP requestleri handle edip yeni 
+bir Employee kaydý yaratan bilme özelliði uygulamanýza eklenecek.
+
+POSTMAN dan POST tipinde bir request ve Employee datalarý gönderdiðinizde uygulamanýz yeni employee kaydýný yaratacak. 
+
+http://localhost:8080/employee la listeye baktýðýmýda bu yeni kaydý görüyor olacaðiz. 
+
+
+
+
+
+
+
+
+
+
+
+
+Spring Boot Restful Client

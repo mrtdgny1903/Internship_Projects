@@ -1,0 +1,13 @@
+Third day in görevi bugun
+
+SpringBootRestApiExample ile Yapýldý..  http://websystique.com/spring-boot/spring-boot-rest-api-example/
+
+POST metodu ile veri ekleyip
+
+GET ile verileri getirdik.
+
+
+
+Yeni Tutorial
+
+https://docs.sencha.com/extjs/6.0.2/guides/getting_started/getting_started.html

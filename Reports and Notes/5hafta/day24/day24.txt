@@ -1,0 +1,9 @@
+ES6 typescript araþtýrýldý.
+
+promise
+
+async / await 
+
+kavramlarý çalýþýldý..
+
+typescript ile multiple connection database çalýþýldý..

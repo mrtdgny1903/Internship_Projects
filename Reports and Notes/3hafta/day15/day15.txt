@@ -1,0 +1,7 @@
+Yeni projeye baþlandý (Sportcial)
+
+Çalýþma ortamý kuruldu..Eclipsede proje github a baðlandý..
+
+Kayhan abi anlatým yaptý..
+
+Java tarafýna baþlandý..
